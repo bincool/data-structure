@@ -1,4 +1,4 @@
-package com.wchy.structure.sort.object;
+package com.wchy.structure.sort.object.insertsort;
 
 import org.junit.After;
 import org.junit.Before;
@@ -7,11 +7,29 @@ import org.junit.Test;
 import com.wchy.structure.sort.object.abst.PersonSort;
 import com.wchy.structure.sort.object.bean.OldPerson;
 import com.wchy.structure.sort.object.bean.Person;
-import com.wchy.structure.sort.object.insertsort.PersonInsertSort;
 
-public class PersonSortTest 
+/**
+ * 
+* @ClassName PersonInsertSortTest.java
+* @Description 
+* <p>
+* 人：插入排序测试类.
+* </p>
+* <p>
+* 详细描述.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月26日 下午8:01:58.
+*
+ */
+public class PersonInsertSortTest 
 {
-	
+
 	private PersonSort<Person> personSort;
 
 	@Before
@@ -19,14 +37,15 @@ public class PersonSortTest
 	{
 		personSort = new PersonInsertSort<Person>(100);
 	}
-
+	
 	@After
 	public void tearDown() throws Exception 
 	{
+		personSort = null;
 	}
 
 	@Test
-	public void testPersonSort() 
+	public void testSort() 
 	{
 		personSort.put(new Person("Patty", "M", 24));
 		personSort.put(new OldPerson("Doc", "M", 59, "600.00"));
@@ -42,7 +61,6 @@ public class PersonSortTest
 		personSort.dispaly();
 		personSort.sort();
 		personSort.dispaly();
-		
 	}
 
 }

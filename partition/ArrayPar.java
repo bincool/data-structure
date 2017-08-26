@@ -8,7 +8,7 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName ArrayPar.java
 * @Description 
 * <p>
-* 划分.
+* 数字：划分算法.
 * </p>
 * <p>
 * 详细描述.
@@ -32,12 +32,12 @@ public class ArrayPar<T extends Number> extends NumberSort<T>
 	private final static Logger LOGGER = Logger.getLogger(ArrayPar.class);
 	
 	
-	protected ArrayPar() 
+	public ArrayPar() 
 	{
 		super(10);
 	}
 	
-	protected ArrayPar(int initCapacity) 
+	public ArrayPar(int initCapacity) 
 	{
 		super(initCapacity);
 	}

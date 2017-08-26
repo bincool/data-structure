@@ -3,10 +3,24 @@ package com.wchy.structure.sort.bubble;
 import com.wchy.structure.sort.base.NumberSort;
 
 /**
- * 冒泡排序.
- * @author bingV
- *
- * @param <T>
+ * 
+* @ClassName BubbleSort.java
+* @Description 
+* <p>
+* 数字：冒泡排序.
+* </p>
+* <p>
+* 详细描述.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月26日 下午7:40:37.
+* 
+* @param <T>
  */
 public class BubbleSort<T extends Number> extends NumberSort<T>
 {

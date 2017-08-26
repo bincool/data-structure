@@ -3,10 +3,24 @@ package com.wchy.structure.sort.insert;
 import com.wchy.structure.sort.base.NumberSort;
 
 /**
- * 插入排序.
- * @author bingV
- *
- * @param <T>
+ * 
+* @ClassName InsertSort.java
+* @Description 
+* <p>
+* 数字：插入排序.
+* </p>
+* <p>
+* 详细描述.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月26日 下午7:42:23.
+* 
+* @param <T>
  */
 public class InsertSort<T extends Number> extends NumberSort<T> 
 {

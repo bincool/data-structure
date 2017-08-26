@@ -6,7 +6,7 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName ShellSort.java
 * @Description 
 * <p>
-* Ï£¶ûÅÅĞò.
+* Êı×Ö£ºÏ£¶ûÅÅĞò.
 * </p>
 * <p>
 * ÏêÏ¸ÃèÊö.

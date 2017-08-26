@@ -3,7 +3,7 @@ package com.wchy.structure.sort.base;
 import org.apache.log4j.Logger;
 
 /**
- * 
+ * 数字类数组排序抽象类接口，排序算法需要具体类实现.
 * @ClassName NumberSort.java
 * @Description 
 * <p>

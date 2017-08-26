@@ -5,6 +5,26 @@ import org.apache.log4j.Logger;
 import com.wchy.structure.sort.object.abst.PersonSort;
 import com.wchy.structure.sort.object.bean.Person;
 
+/**
+ * 
+* @ClassName PersonInsertSort.java
+* @Description 
+* <p>
+* 人：插入排序.
+* </p>
+* <p>
+* 详细描述.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月26日 下午7:59:21.
+* 
+* @param <T>
+ */
 public class PersonInsertSort<T extends Person> extends PersonSort<T> 
 {
 	

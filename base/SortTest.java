@@ -11,7 +11,7 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName SortTest.java
 * @Description 
 * <p>
-* 排序测试-抽象类.
+* 数字排序测试-抽象类.
 * </p>
 * <p>
 * 详细描述.
@@ -29,8 +29,10 @@ import com.wchy.structure.sort.base.NumberSort;
 public abstract class SortTest<T extends Number> 
 {
 	
+	// 数字排序接口.
 	protected NumberSort<T> sortApp;
 	
+	// 待排序的数组默认大小.
 	protected static int defalutSize = 20;
 
 	@Before

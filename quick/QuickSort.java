@@ -7,13 +7,13 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName QuickSort.java
 * @Description 
 * <p>
-* 快速排序.
+* 数字：快速排序.
 * </p>
 * <p>
-* TODO 详细描述.
+* 详细描述.
 * </p>
 * <p>
-* TODO 示例代码.
+* 示例代码.
 * </p>
 *
 * @Author wchy.
@@ -25,12 +25,12 @@ import com.wchy.structure.sort.base.NumberSort;
 public class QuickSort<T extends Number> extends NumberSort<T> 
 {
 	
-	protected QuickSort() 
+	public QuickSort() 
 	{
 		super(10);
 	}
 
-	protected QuickSort(int initCapacity) 
+	public QuickSort(int initCapacity) 
 	{
 		super(initCapacity);
 	}
@@ -99,9 +99,8 @@ public class QuickSort<T extends Number> extends NumberSort<T>
 			{
 				swap(leftPtr, rightPtr);
 			}
-			
-			swap(leftPtr, rightPtr);
 		}
+		swap(leftPtr, right);
 		return leftPtr;
 	}
 	

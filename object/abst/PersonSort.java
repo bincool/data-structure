@@ -4,6 +4,26 @@ import org.apache.log4j.Logger;
 import com.wchy.structure.sort.base.Sort;
 import com.wchy.structure.sort.object.bean.Person;
 
+/**
+ * 
+* @ClassName PersonSort.java
+* @Description 
+* <p>
+* 对象排序-抽象类.
+* </p>
+* <p>
+* 详细描述：对person对象及其子类进行排序，按name进行排序.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月26日 下午7:48:41.
+* 
+* @param <T>
+ */
 public abstract class PersonSort<T extends Person> extends Sort<Person> 
 {
 	

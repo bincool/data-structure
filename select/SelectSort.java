@@ -3,10 +3,24 @@ package com.wchy.structure.sort.select;
 import com.wchy.structure.sort.base.NumberSort;
 
 /**
- * 选择排序.
- * @author bingV
- *
- * @param <T>
+ * 
+* @ClassName SelectSort.java
+* @Description 
+* <p>
+* 数字：选择排序.
+* </p>
+* <p>
+* TODO 详细描述.
+* </p>
+* <p>
+* TODO 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月26日 下午7:46:51.
+* 
+* @param <T>
  */
 public class SelectSort<T extends Number> extends NumberSort<T> 
 {
