@@ -1,4 +1,4 @@
-package com.wchy.structure.common;
+package com.wchy.structure.common.utils;
 
 /**
  * 单例类-生产递增种子.

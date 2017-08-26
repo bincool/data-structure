@@ -1,6 +1,6 @@
 package com.wchy.structure.sort.object.bean;
 
-import com.wchy.structure.common.TimeSn;
+import com.wchy.structure.common.utils.TimeSn;
 
 /**
  * 
