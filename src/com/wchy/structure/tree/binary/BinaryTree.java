@@ -150,6 +150,32 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 		}
 	}
 	
+	@Override
+	public TreeNode<T> minimum() 
+	{
+		TreeNode<T> current = root;
+		TreeNode<T> parent = null;
+		while (null != current) 
+		{
+			parent = current;
+			current = current.getLeftChild();
+		}
+		return parent;
+	}
+
+	@Override
+	public TreeNode<T> maximum() 
+	{
+		TreeNode<T> current = root;
+		TreeNode<T> parent = null;
+		while (null != current) 
+		{
+			parent = current;
+			current = current.getRightChild();
+		}
+		return parent;
+	}
+	
 	/**
 	 * 
 	* @Title: compare 

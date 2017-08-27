@@ -70,4 +70,26 @@ public interface Tree<T>
 	 */
 	void order(String methodType);
 	
+	/**
+	 * 
+	* @Title: minimum 
+	* @Description: 查找最小关键字的节点.
+	* @param @return 设定文件. 
+	* @return TreeNode<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	TreeNode<T> minimum();
+	
+	/**
+	 * 
+	* @Title: maximum 
+	* @Description: 查找最大关键字的节点.
+	* @param @return 设定文件. 
+	* @return TreeNode<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	TreeNode<T> maximum();
+	
 }

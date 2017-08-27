@@ -1,5 +1,6 @@
 package com.wchy.structure.tree.binary;
 
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,12 +8,42 @@ import org.junit.Test;
 import com.wchy.structure.tree.bean.Schedule;
 import com.wchy.structure.tree.intf.Tree;
 
+/**
+ * 
+* @ClassName BinaryTreeTest.java
+* @Description 
+* <p>
+* 二叉树测试类.
+* </p>
+* <p>
+* 详细描述.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年8月28日 上午12:25:19.
+*
+ */
 public class BinaryTreeTest 
 {
 	
-	private Tree<Schedule> treeApp;
+	/**
+	 * 日志对象.
+	 */
+	private static final Logger LOGGER = Logger.getLogger(BinaryTreeTest.class);
 	
+	/**
+	 * 临时字符串缓存对象.
+	 */
 	private static final StringBuffer sb = new StringBuffer();
+	
+	/**
+	 * 二叉树对象.
+	 */
+	private Tree<Schedule> treeApp;
 
 	@Before
 	public void setUp() throws Exception 
@@ -40,6 +71,8 @@ public class BinaryTreeTest
 		//treeApp.order("preOrder");
 		treeApp.order("inOrder");
 		//treeApp.order("postOrder");
+		LOGGER.info(treeApp.minimum());
+		LOGGER.info(treeApp.maximum());
 	}
 
 }
