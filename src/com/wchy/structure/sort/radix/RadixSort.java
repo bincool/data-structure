@@ -89,7 +89,7 @@ public class RadixSort extends NumberSort<Integer>
 			{
 				int num = number.intValue();
 				int digit = (num / n) % 10;
-				buckets[digit].push(num);
+				buckets[digit].insert(num);
 			}
 			
 			// 将桶中的数据复制回数组arr.
@@ -97,7 +97,7 @@ public class RadixSort extends NumberSort<Integer>
 			{
 				while (!buckets[j].isEmpty()) 
 				{
-					arr[i++] = buckets[j].pop();
+					arr[i++] = buckets[j].remove();
 				}
 			}
 			

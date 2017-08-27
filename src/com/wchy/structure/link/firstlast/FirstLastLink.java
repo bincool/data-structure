@@ -106,6 +106,20 @@ public class FirstLastLink<T>
 	/**
 	 * 
 	* @Title: deleteFirst 
+	* @Description: 查看链表头部数据.
+	* @param @return 设定文件. 
+	* @return int 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	public T peekFirst() 
+	{
+		return first == null ? null : first.getData();
+	}
+	
+	/**
+	 * 
+	* @Title: deleteFirst 
 	* @Description: 删除链表头部数据，调用前应进行空判断.
 	* @param @return 设定文件. 
 	* @return int 返回类型 .
