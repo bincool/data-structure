@@ -28,18 +28,19 @@ public class RadixSort extends NumberSort<Integer>
 	/**
 	 * 10个桶，分别放置位上为0-9的数据.
 	 */
-	private static Queue[] buckets = new Queue[] 
+	@SuppressWarnings("unchecked")
+	private static Queue<Integer>[] buckets = new Queue[] 
 			{
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue(),
-					new Queue()
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>(),
+					new Queue<Integer>()
 			};
 	
 	/**

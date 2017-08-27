@@ -21,13 +21,13 @@ import com.wchy.structure.link.firstlast.FirstLastLink;
 * @Date 2017年8月27日 下午12:49:21.
 *
  */
-public class Queue 
+public class Queue<T> 
 {
 	
 	/**
 	 * 双端链表,不能写成static，否则是同一个静态内存块.
 	 */
-	private FirstLastLink firstLastLink = new FirstLastLink();
+	private FirstLastLink<T> firstLastLink = new FirstLastLink<T>();
 	
 	/**
 	 * 
@@ -38,7 +38,7 @@ public class Queue
 	* @throws 
 	* 		异常.
 	 */
-	public void push(int data) 
+	public void push(T data) 
 	{
 		firstLastLink.insertLast(data);
 	}
@@ -80,7 +80,7 @@ public class Queue
 	* @throws 
 	* 		异常.
 	 */
-	public int pop() 
+	public T pop() 
 	{
 		return firstLastLink.deleteFirst();
 	}
@@ -94,7 +94,7 @@ public class Queue
 	* @throws 
 	* 		异常.
 	 */
-	public Integer popByCheck() 
+	public T popByCheck() 
 	{
 		if (firstLastLink.isEmpty()) 
 		{

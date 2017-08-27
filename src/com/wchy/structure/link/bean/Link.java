@@ -1,22 +1,22 @@
 package com.wchy.structure.link.bean;
 
-public class Link 
+public class Link<T> 
 {
 	/**
 	 * 数字数据.
 	 */
-	private int data;
+	private T data;
 	
 	/**
 	 * 数字桶节点，指向下一个节点.
 	 */
-	private Link next;
+	private Link<T> next;
 	
 	public Link() 
 	{
 	}
 	
-	public Link(int data) 
+	public Link(T data) 
 	{
 		this.data = data;
 	}
@@ -30,7 +30,7 @@ public class Link
 	* @throws 
 	* 		异常.
 	 */
-	public int getData() 
+	public T getData() 
 	{
 		return data;
 	}
@@ -44,7 +44,7 @@ public class Link
 	* @throws 
 	* 		异常.
 	 */
-	public void setData(int data) 
+	public void setData(T data) 
 	{
 		this.data = data;
 	}
@@ -58,7 +58,7 @@ public class Link
 	* @throws 
 	* 		异常.
 	 */
-	public Link getNext() 
+	public Link<T> getNext() 
 	{
 		return next;
 	}
@@ -72,7 +72,7 @@ public class Link
 	* @throws 
 	* 		异常.
 	 */
-	public void setNext(Link next) 
+	public void setNext(Link<T> next) 
 	{
 		this.next = next;
 	}

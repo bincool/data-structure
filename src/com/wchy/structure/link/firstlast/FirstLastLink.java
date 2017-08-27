@@ -23,7 +23,7 @@ import com.wchy.structure.link.bean.Link;
 * @Date 2017年8月27日 下午12:30:23.
 *
  */
-public class FirstLastLink 
+public class FirstLastLink<T> 
 {
 	
 	/**
@@ -39,12 +39,12 @@ public class FirstLastLink
 	/**
 	 * 链表头部.
 	 */
-	private Link first;
+	private Link<T> first;
 	
 	/**
 	 * 链表尾部.
 	 */
-	private Link last;
+	private Link<T> last;
 	
 	/**
 	 * 
@@ -69,9 +69,9 @@ public class FirstLastLink
 	* @throws 
 	* 		异常.
 	 */
-	public void insertFirst(int data) 
+	public void insertFirst(T data) 
 	{
-		Link newLink = new Link(data);
+		Link<T> newLink = new Link<T>(data);
 		if (isEmpty()) 
 		{
 			last = newLink;
@@ -89,9 +89,9 @@ public class FirstLastLink
 	* @throws 
 	* 		异常.
 	 */
-	public void insertLast(int data) 
+	public void insertLast(T data) 
 	{
-		Link newLink = new Link(data);
+		Link<T> newLink = new Link<T>(data);
 		if (isEmpty()) 
 		{
 			first = newLink;
@@ -112,9 +112,9 @@ public class FirstLastLink
 	* @throws 
 	* 		异常.
 	 */
-	public int deleteFirst() 
+	public T deleteFirst() 
 	{
-		int ret = first.getData();
+		T ret = first.getData();
 		if (null == first.getNext()) 
 		{
 			last = null;
@@ -134,7 +134,7 @@ public class FirstLastLink
 	 */
 	public void display() 
 	{
-		Link current = first;
+		Link<T> current = first;
 		while (null != current) 
 		{
 			sb.append(current.getData()).append(" ");
