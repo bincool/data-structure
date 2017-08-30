@@ -106,7 +106,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 		} 
 		else 
 		{
-			while (current.getData().getStartDate().equals(data.getStartDate())) 
+			while (!isEquals(current.getData(), data)) 
 			{
 				if (compare(current.getData(), data)) 
 				{
@@ -126,9 +126,108 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	}
 
 	@Override
-	public void delete(T data) 
+	public boolean delete(T data) 
 	{
+		TreeNode<T> current = root;
+		TreeNode<T> parent = root;
+		boolean isLeftChild = true;
 		
+		if (null == current) 
+		{
+			return false;
+		} 
+		else 
+		{
+			// 1 查找要删除的节点，找不到返回false.
+			while (!isEquals(current.getData(), data)) 
+			{
+				parent = current;
+				if (compare(current.getData(), data)) 
+				{
+					isLeftChild = true;
+					current = current.getLeftChild();
+				} 
+				else 
+				{
+					isLeftChild = false;
+					current = current.getRightChild();
+				}
+				if (null == current) 
+				{
+					return false;
+				}
+			}
+			
+			// 2 检查节点是否是叶节点，已经检查节点是否是根.
+			if (isLeaf(current)) 
+			{
+				if (current == root) 
+				{
+					root = null;
+				} 
+				else if (isLeftChild) 
+				{
+					parent.setLeftChild(null);
+				} 
+				else 
+				{
+					parent.setRightChild(null);
+				}
+			} 
+			// 2.1 有一个左孩子节点.
+			else if (null == current.getRightChild()) 
+			{
+				if (current == root) 
+				{
+					root = current.getLeftChild();
+				} 
+				else if (isLeftChild) 
+				{
+					parent.setLeftChild(current.getLeftChild());
+				} 
+				else 
+				{
+					parent.setRightChild(current.getLeftChild());
+				}
+			} 
+			// 2.2 有一个右孩子节点.
+			else if (null == current.getLeftChild()) 
+			{
+				if (current == root) 
+				{
+					root = current.getRightChild();
+				} 
+				else if (isLeftChild) 
+				{
+					parent.setLeftChild(current.getRightChild());
+				} 
+				else 
+				{
+					parent.setRightChild(current.getRightChild());
+				}
+			} 
+			// 2.3 有两个孩子节点.
+			else 
+			{
+				// 2.3.1 查找后继节点.
+				TreeNode<T> successor = getSuccessor(current);
+				if (current == root) 
+				{
+					root = successor;
+				} 
+				else if (isLeftChild)
+				{
+					parent.setLeftChild(successor);
+				} 
+				else 
+				{
+					parent.setRightChild(successor);
+				}
+				successor.setLeftChild(current.getLeftChild());
+			}
+		}
+		
+		return true;
 	}
 
 	@Override
@@ -191,6 +290,69 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	private boolean compare(Schedule a, Schedule b) 
 	{
 		return a.getStartDate().compareTo(b.getStartDate()) > 0;
+	}
+	
+	/**
+	 * 
+	* @Title: compare 
+	* @Description: 比较日程表的开始时间.
+	* @param @param a
+	* @param @param b
+	* @param @return 设定文件. 
+	* @return boolean 返回类型 .
+	* 		true:a的开始时间晚于b.false:b的时间早等于a.
+	* @throws 
+	* 		异常.
+	 */
+	private boolean isEquals(Schedule a, Schedule b) 
+	{
+		return a.getStartDate().equals(b.getStartDate());
+	}
+	
+	/**
+	 * 
+	* @Title: isLeaf 
+	* @Description: 检查节点是否是叶节点.
+	* @param @param rNode
+	* @param @return 设定文件. 
+	* @return boolean 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private boolean isLeaf(TreeNode<T> rNode) 
+	{
+		return null == rNode.getLeftChild() && null == rNode.getRightChild();
+	}
+	
+	/**
+	 * 
+	* @Title: getSuccessor 
+	* @Description: 找节点的后继节点.
+	* @param @param rNode
+	* 		含右孩子节点.
+	* @param @return 设定文件. 
+	* @return TreeNode<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private TreeNode<T> getSuccessor(TreeNode<T> rNode) 
+	{
+		TreeNode<T> successorParent = rNode;
+		TreeNode<T> successor = rNode;
+		TreeNode<T> current = rNode.getRightChild();
+		while (null != current) 
+		{
+			successorParent = successor;
+			successor = current;
+			current = current.getLeftChild();
+		}
+		
+		if (successor != rNode.getRightChild()) 
+		{
+			successorParent.setLeftChild(successor.getRightChild());
+			successor.setRightChild(rNode.getRightChild());
+		}
+		return successor;
 	}
 	
 	/**

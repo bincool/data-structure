@@ -53,11 +53,11 @@ public interface Tree<T>
 	* @Title: delete 
 	* @Description: 按关键字删除节点.
 	* @param @param key 设定文件. 
-	* @return void 返回类型 .
+	* @return boolean 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	void delete(T data);
+	boolean delete(T data);
 	
 	/**
 	 * 
