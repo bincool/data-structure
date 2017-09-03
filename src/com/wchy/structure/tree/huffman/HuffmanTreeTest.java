@@ -1,18 +1,18 @@
-package com.wchy.structure.queue.arr.priority;
+package com.wchy.structure.tree.huffman;
 
-import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.wchy.structure.queue.arr.priority.PriorityQueue;
 import com.wchy.structure.tree.bean.HuffmanNode;
 
 /**
  * 
-* @ClassName PriorityQueueTest.java
+* @ClassName HuffmanTreeTest.java
 * @Description 
 * <p>
-* 优先级队列测试.
+* 哈夫曼树测试.
 * </p>
 * <p>
 * 详细描述.
@@ -23,26 +23,18 @@ import com.wchy.structure.tree.bean.HuffmanNode;
 *
 * @Author wchy.
 * 
-* @Date 2017年9月3日 下午9:29:09.
+* @Date 2017年9月3日 下午10:13:00.
 *
  */
-public class PriorityQueueTest 
+public class HuffmanTreeTest 
 {
 	
-	/**
-	 * 日志对象.
-	 */
-	private static final Logger LOGGER = Logger.getLogger(PriorityQueueTest.class);
-	
-	/**
-	 * 队列对象.
-	 */
-	private PriorityQueue<HuffmanNode> queueApp;
+	private HuffmanTree huffmanTree;
 
 	@Before
 	public void setUp() throws Exception 
 	{
-		queueApp = new PriorityQueue<HuffmanNode>();
+		PriorityQueue<HuffmanNode> queueApp = new PriorityQueue<HuffmanNode>();
 		queueApp.insert(new HuffmanNode('A', 2));
 		queueApp.insert(new HuffmanNode('E', 2));
 		queueApp.insert(new HuffmanNode('I', 3));
@@ -52,21 +44,22 @@ public class PriorityQueueTest
 		queueApp.insert(new HuffmanNode('Y', 2));
 		queueApp.insert(new HuffmanNode('#', 4));
 		queueApp.insert(new HuffmanNode('$', 1));
+		huffmanTree = new HuffmanTree(queueApp);
 	}
 
 	@After
 	public void tearDown() throws Exception 
 	{
-		queueApp = null;
+		huffmanTree = null;
 	}
 
 	@Test
-	public void testInsert() 
+	public void testCreateTree() 
 	{
-		while (!queueApp.isEmpty()) 
-		{
-			LOGGER.info(queueApp.remove());
-		}
+		huffmanTree.createTree();
+		huffmanTree.order("preOrder");
+		huffmanTree.order("inOrder");
+		huffmanTree.order("postOrder");
 	}
 
 }

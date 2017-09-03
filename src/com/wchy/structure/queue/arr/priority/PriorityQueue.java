@@ -23,7 +23,7 @@ import com.wchy.structure.tree.bean.HuffmanNode;
 * 
 * @param <T>
  */
-public class PriorityQueue implements MyQueue<HuffmanNode> 
+public class PriorityQueue<T extends HuffmanNode> implements MyQueue<T> 
 {
 	
 	/**
@@ -54,7 +54,7 @@ public class PriorityQueue implements MyQueue<HuffmanNode>
 	}
 
 	@Override
-	public void insert(HuffmanNode element) 
+	public void insert(T element) 
 	{
 		if (isEmpty()) 
 		{
@@ -79,16 +79,18 @@ public class PriorityQueue implements MyQueue<HuffmanNode>
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public HuffmanNode remove() 
+	public T remove() 
 	{
-		return queueArr[--size];
+		return (T)queueArr[--size];
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public HuffmanNode peek() 
+	public T peek() 
 	{
-		return queueArr[size - 1];
+		return (T)queueArr[size - 1];
 	}
 
 	@Override
