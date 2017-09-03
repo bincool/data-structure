@@ -5,6 +5,25 @@ import org.apache.log4j.Logger;
 import com.wchy.structure.queue.arr.priority.PriorityQueue;
 import com.wchy.structure.tree.bean.HuffmanNode;
 
+/**
+ * 
+* @ClassName HuffmanTree.java
+* @Description 
+* <p>
+* 哈夫曼树-字符编码.
+* </p>
+* <p>
+* 详细描述：用优先级队列实现，其中优先级队列的内部用数组实现.
+* </p>
+* <p>
+* 示例代码.
+* </p>
+*
+* @Author wchy.
+* 
+* @Date 2017年9月3日 下午11:28:35.
+*
+ */
 public class HuffmanTree 
 {
 	
@@ -13,6 +32,9 @@ public class HuffmanTree
 	 */
 	private static final Logger LOGGER = Logger.getLogger(HuffmanTree.class);
 	
+	/**
+	 * 字符串缓存,打印使用.
+	 */
 	private static final StringBuffer sb = new StringBuffer();
 	
 	/**
@@ -20,6 +42,9 @@ public class HuffmanTree
 	 */
 	private HuffmanNode root;
 	
+	/**
+	 * 优先级队列.
+	 */
 	private PriorityQueue<HuffmanNode> queue;
 	
 	public HuffmanTree(PriorityQueue<HuffmanNode> queue) 
