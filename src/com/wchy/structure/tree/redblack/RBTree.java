@@ -52,9 +52,9 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	* @throws 
 	* 		异常.
 	 */
-	private RBTNode<T> parentOf(RBTNode<T> node) 
+	private RBTNode<T> parentNodeOf(RBTNode<T> node) 
 	{
-		return null != node ? node.getParent() : null;
+		return null != node ? node.getParentNode() : null;
 	}
 	
 	/**
@@ -138,19 +138,19 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	
 	/**
 	 * 
-	* @Title: setParent 
+	* @Title: setParentNode 
 	* @Description: 设置节点的父节点.
 	* @param @param node
-	* @param @param parent 设定文件. 
+	* @param @param parentNode 设定文件. 
 	* @return void 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	private void setParent(RBTNode<T> node, RBTNode<T> parent) 
+	private void setParentNode(RBTNode<T> node, RBTNode<T> parentNode) 
 	{
 		if (null != node) 
 		{
-			node.setParent(parent);
+			node.setParentNode(parentNode);
 		}
 	}
 	
@@ -170,6 +170,107 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		{
 			node.setColor(color);
 		}
+	}
+	
+	/**
+	 * 
+	* @Title: leftRotate 
+	* @Description: 对红黑树的节点xNode进行左旋转,前提条件是xNode的右孩子存在.
+	* @param @param xNode 设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void leftRotate(RBTNode<T> xNode) 
+	{
+		// 1 找到xNode的右孩子yNode.
+		RBTNode<T> yNode = xNode.getRightChild();
+		
+		// 2 设置xNode的右孩子为yNode的左孩子，yNode左孩子的父节点为xNode.
+		xNode.setRightChild(yNode.getLeftChild());
+		if (null != yNode.getLeftChild()) 
+		{
+			yNode.getLeftChild().setParentNode(xNode);
+		}
+		
+		// 将yNode节点的父节点设置为xNode的父节点.
+		yNode.setParentNode(xNode.getParentNode());
+		if (null == xNode.getParentNode()) 
+		{
+			// 如果xNode的父节点为null，则将yNode设置为根.
+			root = yNode;
+		} 
+		else 
+		{
+			// 如果xNode是其父节点的左孩子.
+			if (xNode == xNode.getParentNode().getLeftChild()) 
+			{
+				// 将yNode设置为xNode父节点的左孩子.
+				xNode.getParentNode().setLeftChild(yNode);
+			} 
+			else 
+			{
+				// 将yNode设置为xNode父节点的右孩子.
+				xNode.getParentNode().setRightChild(yNode);
+			}
+		}
+		
+		// 将xNode设为yNode的左孩子”.
+		yNode.setLeftChild(xNode);
+		
+		// 将xNode的父节点设置为yNode.
+		xNode.setParentNode(yNode);
+	}
+	
+	/**
+	 * 
+	* @Title: rightRotate 
+	* @Description: 对红黑树的节点yNode进行右旋转.
+	* @param @param yNode 设定文件.
+	* @return void 返回类型.
+	* @throws 
+	* 		异常.
+	 */
+	private void rightRotate(RBTNode<T> yNode) 
+	{
+		// 1 找到yNode的左孩子.
+		RBTNode<T> xNode = yNode.getLeftChild();
+		
+		// 2 设置yNode的左孩子为xNode的右孩子,xNode右孩子的父节点为yNode.
+		yNode.setLeftChild(xNode.getRightChild());
+		if (null != xNode.getRightChild()) 
+		{
+			xNode.getRightChild().setParentNode(yNode);
+		}
+		
+		// 3 设置xNode的父节点为yNode的父节点.
+		xNode.setParentNode(yNode.getParentNode());
+		if (null == yNode.getParentNode()) 
+		{
+			// 如果yNode的父节点为空，设置xNode为根节点.
+			root = xNode;
+		} 
+		else 
+		{
+			// 如果yNode是其父节点的右孩子.
+			if (yNode == yNode.getParentNode().getRightChild()) 
+			{
+				// 设置xNode为yNode的父节点的右孩子.
+				yNode.getParentNode().setRightChild(xNode);
+			} 
+			else 
+			{
+				// 设置xNode为yNode的父节点的左孩子.
+				yNode.getParentNode().setLeftChild(xNode);
+			}
+		}
+		
+		// 将yNode设为xNode的右孩子.
+		xNode.setRightChild(yNode);
+		
+		// 将yNode的父节点设为xNode.
+		yNode.setParentNode(xNode);
+		
 	}
 
 	@Override

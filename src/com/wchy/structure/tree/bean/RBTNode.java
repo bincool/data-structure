@@ -8,13 +8,13 @@ import com.wchy.structure.tree.constants.RBTConstant;
 * @ClassName RBTNode.java
 * @Description 
 * <p>
-* TODO 一句话对这个类进行描述.
+* 红黑树.
 * </p>
 * <p>
-* TODO 详细描述.
+* 详细描述.
 * </p>
 * <p>
-* TODO 示例代码.
+* 示例代码.
 * </p>
 *
 * @Author wchy.
@@ -34,17 +34,17 @@ public class RBTNode<T extends CompareIntf<T>>
     /**
      * 左孩子.
      */
-    private RBTNode<T> left;
+    private RBTNode<T> leftChild;
     
     /**
      * 右孩子.
      */
-    private RBTNode<T> right;
+    private RBTNode<T> rightChild;
     
     /**
      * 父节点.
      */
-    private RBTNode<T> parent;
+    private RBTNode<T> parentNode;
     
     /**
      * 节点颜色,默认为黑色.
@@ -88,9 +88,9 @@ public class RBTNode<T extends CompareIntf<T>>
 	* @throws 
 	* 		异常.
 	 */
-	public RBTNode<T> getLeft() 
+	public RBTNode<T> getLeftChild() 
 	{
-		return left;
+		return leftChild;
 	}
 
 	/**
@@ -102,9 +102,9 @@ public class RBTNode<T extends CompareIntf<T>>
 	* @throws 
 	* 		异常.
 	 */
-	public void setLeft(RBTNode<T> left) 
+	public void setLeftChild(RBTNode<T> leftChild) 
 	{
-		this.left = left;
+		this.leftChild = leftChild;
 	}
 
 	/**
@@ -116,9 +116,9 @@ public class RBTNode<T extends CompareIntf<T>>
 	* @throws 
 	* 		异常.
 	 */
-	public RBTNode<T> getRight() 
+	public RBTNode<T> getRightChild() 
 	{
-		return right;
+		return rightChild;
 	}
 
 	/**
@@ -130,9 +130,9 @@ public class RBTNode<T extends CompareIntf<T>>
 	* @throws 
 	* 		异常.
 	 */
-	public void setRight(RBTNode<T> right) 
+	public void setRightChild(RBTNode<T> rightChild) 
 	{
-		this.right = right;
+		this.rightChild = rightChild;
 	}
 
 	/**
@@ -144,9 +144,9 @@ public class RBTNode<T extends CompareIntf<T>>
 	* @throws 
 	* 		异常.
 	 */
-	public RBTNode<T> getParent() 
+	public RBTNode<T> getParentNode() 
 	{
-		return parent;
+		return parentNode;
 	}
 
 	/**
@@ -158,9 +158,9 @@ public class RBTNode<T extends CompareIntf<T>>
 	* @throws 
 	* 		异常.
 	 */
-	public void setParent(RBTNode<T> parent) 
+	public void setParentNode(RBTNode<T> parentNode) 
 	{
-		this.parent = parent;
+		this.parentNode = parentNode;
 	}
 	
 	/**
