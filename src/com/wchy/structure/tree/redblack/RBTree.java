@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 
 import com.wchy.structure.common.utils.CompareIntf;
 import com.wchy.structure.tree.bean.RBTNode;
-import com.wchy.structure.tree.bean.TreeNode;
 import com.wchy.structure.tree.constants.RBTConstant;
 import com.wchy.structure.tree.intf.Tree;
 
@@ -35,6 +34,22 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	 * 日志对象.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(RBTree.class);
+	
+	/**
+	 * 遍历二叉树的方法.
+	 */
+	private static enum OrderMethod 
+	{
+		preOrder,
+		inOrder,
+		postOrder;
+		
+		protected static OrderMethod getMethodType(String methodType) 
+		{
+			return valueOf(methodType);
+		}
+		
+	}
 	
 	
 	/**
@@ -272,6 +287,77 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		yNode.setParentNode(xNode);
 		
 	}
+	
+	/**
+	 * 
+	* @Title: accessNode 
+	* @Description: 访问节点.
+	* @param @param rNode 设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void accessNode(RBTNode<T> rNode) 
+	{
+		LOGGER.info(rNode.getData());
+	}
+	
+	/**
+	 * 
+	* @Title: inOrder 
+	* @Description: 中序遍历.
+	* @param  设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void inOrder(RBTNode<T> root) 
+	{
+		if (null != root) 
+		{
+			inOrder(root.getLeftChild());
+			accessNode(root);
+			inOrder(root.getRightChild());
+		}
+	}
+	
+	/**
+	 * 
+	* @Title: preOrder 
+	* @Description: 前序遍历.
+	* @param  设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void preOrder(RBTNode<T> root) 
+	{
+		if (null != root) 
+		{
+			accessNode(root);
+			preOrder(root.getLeftChild());
+			preOrder(root.getRightChild());
+		}
+	}
+	
+	/**
+	 * 
+	* @Title: postOrder 
+	* @Description: 后序遍历.
+	* @param  设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void postOrder(RBTNode<T> root) 
+	{
+		if (null != root) 
+		{
+			postOrder(root.getLeftChild());
+			postOrder(root.getRightChild());
+			accessNode(root);
+		}
+	}
 
 	@Override
 	public void insert(T data) 
@@ -282,9 +368,35 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	}
 
 	@Override
-	public TreeNode<T> find(T data) 
+	public RBTNode<T> find(T data) 
 	{
-		return null;
+		RBTNode<T> current = root;
+		
+		if (null == current) 
+		{
+			return null;
+		} 
+		else 
+		{
+			int cmp = 0;
+			while (0 != (cmp = current.getData().compareTo(data))) 
+			{
+				
+				if (cmp < 0) 
+				{
+					current = current.getRightChild();
+				} 
+				else 
+				{
+					current = current.getLeftChild();
+				}
+				if (null == current) 
+				{
+					return null;
+				}
+			}
+			return current;
+		}
 	}
 
 	@Override
@@ -296,19 +408,46 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	@Override
 	public void order(String methodType) 
 	{
-		
+		switch (OrderMethod.getMethodType(methodType)) 
+		{
+		case preOrder:
+			preOrder(root);
+			break;
+		case inOrder:
+			inOrder(root);
+			break;
+		case postOrder:
+			postOrder(root);
+			break;
+		default:
+			break;
+		}
 	}
 
 	@Override
-	public TreeNode<T> minimum() 
+	public RBTNode<T> minimum() 
 	{
-		return null;
+		RBTNode<T> current = root;
+		RBTNode<T> parent = null;
+		while (null != current) 
+		{
+			parent = current;
+			current = current.getLeftChild();
+		}
+		return parent;
 	}
 
 	@Override
-	public TreeNode<T> maximum() 
+	public RBTNode<T> maximum() 
 	{
-		return null;
+		RBTNode<T> current = root;
+		RBTNode<T> parent = null;
+		while (null != current) 
+		{
+			parent = current;
+			current = current.getRightChild();
+		}
+		return parent;
 	}
 	
 }

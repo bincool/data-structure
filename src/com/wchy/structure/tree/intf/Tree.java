@@ -1,7 +1,5 @@
 package com.wchy.structure.tree.intf;
 
-import com.wchy.structure.tree.bean.TreeNode;
-
 /**
  * 
 * @ClassName Tree.java
@@ -42,11 +40,11 @@ public interface Tree<T>
 	* @Description: 按关键字查找节点.
 	* @param @param key
 	* @param @return 设定文件. 
-	* @return TreeNode<T> 返回类型 .
+	* @return Object 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	TreeNode<T> find(T data);
+	Object find(T data);
 	
 	/**
 	 * 
@@ -75,21 +73,21 @@ public interface Tree<T>
 	* @Title: minimum 
 	* @Description: 查找最小关键字的节点.
 	* @param @return 设定文件. 
-	* @return TreeNode<T> 返回类型 .
+	* @return Object 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	TreeNode<T> minimum();
+	Object minimum();
 	
 	/**
 	 * 
 	* @Title: maximum 
 	* @Description: 查找最大关键字的节点.
 	* @param @return 设定文件. 
-	* @return TreeNode<T> 返回类型 .
+	* @return Object 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	TreeNode<T> maximum();
+	Object maximum();
 	
 }
