@@ -358,11 +358,131 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 			accessNode(root);
 		}
 	}
+	
+	/**
+	 * 
+	* @Title: minimum 
+	* @Description: 查找以tree为根节点的树的最小节点.
+	* @param @param tree
+	* @param @return 设定文件. 
+	* @return RBTNode<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private RBTNode<T> minimum(RBTNode<T> tree) 
+	{
+		RBTNode<T> current = tree;
+		if (null == current) 
+		{
+			return null;
+		}
+		
+		while (null != current.getLeftChild()) 
+		{
+			current = current.getLeftChild();
+		}
+		
+		return current;
+	}
+	
+	/**
+	 * 
+	* @Title: maximum 
+	* @Description: 查找以tree为根节点的树的最大节点.
+	* @param @param tree
+	* @param @return 设定文件. 
+	* @return RBTNode<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private RBTNode<T> maximum(RBTNode<T> tree) 
+	{
+		RBTNode<T> current = tree;
+		if (null == current) 
+		{
+			return null;
+		} 
+		
+		while (null != current.getRightChild()) 
+		{
+			current = current.getRightChild();
+		} 
+		
+		return current;
+	}
+	
+	/**
+	 * 
+	* @Title: getSuccessor 
+	* @Description: 获取xNode节点的后继节点，比xNode大的最小节点.
+	* @param @param xNode
+	* @param @return 设定文件. 
+	* @return RBTree<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	public RBTNode<T> getSuccessor(RBTNode<T> xNode) 
+	{
+		// 如果xNode存在右孩子，则xNode的后继节点为以其右孩子为根的子树的最小节点.
+		if (null != xNode.getRightChild()) 
+		{
+			return minimum(xNode.getRightChild());
+		}
+		
+		// 如果xNode没有右孩子，则xNode有两种情况.
+		// xNode是一个左孩子，则xNode的后继节点为它的父节点.
+		// xNode是一个右孩在，则查找xNode的最低的父节点，并且这个最低父节点要具有左孩子，找到这个最低的父节点就是xNode的后继节点.
+		RBTNode<T> yNode = xNode.getParentNode();
+		while ((null != yNode) && (yNode.getRightChild() == xNode)) 
+		{
+			xNode = yNode;
+			yNode = yNode.getParentNode();
+		}
+		
+		return yNode;
+	}
+	
+	/**
+	 * 
+	* @Title: getPredecessor 
+	* @Description: 找xNode的前驱节点，比xNode小的最大节点.
+	* @param @param xNode
+	* @param @return 设定文件. 
+	* @return RBTNode<T> 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	public RBTNode<T> getPredecessor(RBTNode<T> xNode) 
+	{
+		// 如果xNode存在左孩子，则xNode的前驱节点为以其左孩子为根的子树的最大节点.
+		if (null != xNode.getLeftChild()) 
+		{
+			return maximum(xNode);
+		}
+		
+		// 如果xNode没有左孩子，则xNode有两种可能.
+		// xNode是一个右孩子，则xNode的前驱节点为它的父节点.
+		// xNode是一个左孩子，则查找xNode的最低的父节点，并且该父节点的要具有右孩子，找到这个最低父节点就是xNode前驱节点.
+		RBTNode<T> yNode = xNode.getParentNode();
+		while ((null != yNode) && (yNode.getLeftChild() == xNode)) 
+		{
+			xNode = yNode;
+			yNode = yNode.getParentNode();
+		}
+		
+		return yNode;
+	}
 
 	@Override
 	public void insert(T data) 
 	{
 		LOGGER.info("Begin to execute the insert method.");
+		
+		// 1 将红黑树当作一颗二叉查找树，将节点添加到二叉树中.
+		
+		// 2 设置节点的颜色为红色.
+		
+		// 3 将它重新修正为一颗红黑树.
 		
 		LOGGER.info("End to execute the insert method.");
 	}
@@ -427,27 +547,13 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	@Override
 	public RBTNode<T> minimum() 
 	{
-		RBTNode<T> current = root;
-		RBTNode<T> parent = null;
-		while (null != current) 
-		{
-			parent = current;
-			current = current.getLeftChild();
-		}
-		return parent;
+		return minimum(root);
 	}
 
 	@Override
 	public RBTNode<T> maximum() 
 	{
-		RBTNode<T> current = root;
-		RBTNode<T> parent = null;
-		while (null != current) 
-		{
-			parent = current;
-			current = current.getRightChild();
-		}
-		return parent;
+		return maximum(root);
 	}
 	
 }
