@@ -51,7 +51,6 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		
 	}
 	
-	
 	/**
 	 * 根节点.
 	 */
@@ -299,7 +298,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	 */
 	private void accessNode(RBTNode<T> rNode) 
 	{
-		LOGGER.info(rNode.getData());
+		LOGGER.info(rNode.toString());
 	}
 	
 	/**
@@ -580,8 +579,6 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	@Override
 	public void insert(T data) 
 	{
-		LOGGER.info("Begin to execute the insert method.");
-		
 		RBTNode<T> node = new RBTNode<T>();
 		node.setData(data);
 		
@@ -628,8 +625,6 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		
 		// 3 将它重新修正为一颗红黑树.
 		insertFix(node);
-		
-		LOGGER.info("End to execute the insert method.");
 	}
 
 	@Override
