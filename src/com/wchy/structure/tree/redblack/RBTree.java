@@ -1,5 +1,7 @@
 package com.wchy.structure.tree.redblack;
 
+import javax.xml.soap.Node;
+
 import org.apache.log4j.Logger;
 
 import com.wchy.structure.common.utils.CompareIntf;
@@ -421,7 +423,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	* @throws 
 	* 		异常.
 	 */
-	public RBTNode<T> getSuccessor(RBTNode<T> xNode) 
+	private RBTNode<T> getSuccessor(RBTNode<T> xNode) 
 	{
 		// 如果xNode存在右孩子，则xNode的后继节点为以其右孩子为根的子树的最小节点.
 		if (null != xNode.getRightChild()) 
@@ -452,7 +454,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	* @throws 
 	* 		异常.
 	 */
-	public RBTNode<T> getPredecessor(RBTNode<T> xNode) 
+	private RBTNode<T> getPredecessor(RBTNode<T> xNode) 
 	{
 		// 如果xNode存在左孩子，则xNode的前驱节点为以其左孩子为根的子树的最大节点.
 		if (null != xNode.getLeftChild()) 
@@ -472,17 +474,86 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		
 		return yNode;
 	}
+	
+	/**
+	 * 
+	* @Title: insertFix 
+	* @Description: 红黑树插入修正函数，在向红黑树插入节点之后调整平衡，将其重新构造成一棵红黑树.
+	* @param @param node 设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void insertFix(RBTNode<T> node) 
+	{
+		
+	}
+	
+	/**
+	 * 
+	* @Title: removeFix 
+	* @Description: 红黑树删除修正函数，在向红黑树删除节点之后调整平衡，将其重新构造成一棵红黑树.
+	* @param @param node 设定文件. 
+	* @return void 返回类型 .
+	* @throws 
+	* 		异常.
+	 */
+	private void removeFix(RBTNode<T> node, RBTNode<T> paretNode) 
+	{
+		
+	}
 
 	@Override
 	public void insert(T data) 
 	{
 		LOGGER.info("Begin to execute the insert method.");
 		
+		RBTNode<T> node = new RBTNode<T>();
+		node.setData(data);
+		
+		int cmp;
+		RBTNode<T> yNode = null;
+		RBTNode<T> xNode = root;
+		
 		// 1 将红黑树当作一颗二叉查找树，将节点添加到二叉树中.
+		while (null != xNode) 
+		{
+			yNode = xNode;
+			cmp = data.compareTo(xNode.getData());
+			if (cmp < 0) 
+			{
+				xNode = xNode.getLeftChild();
+			} 
+			else 
+			{
+				xNode = xNode.getRightChild();
+			}
+		}
+		
+		node.setParentNode(yNode);
+		if (null != yNode) 
+		{
+			cmp = data.compareTo(yNode.getData());
+			if (cmp < 0) 
+			{
+				yNode.setLeftChild(node);
+			} 
+			else 
+			{
+				yNode.setRightChild(node);
+			}
+		} 
+		else 
+		{
+			root = node;
+		}
+		
 		
 		// 2 设置节点的颜色为红色.
+		node.setColor(RBTConstant.RED);
 		
 		// 3 将它重新修正为一颗红黑树.
+		insertFix(node);
 		
 		LOGGER.info("End to execute the insert method.");
 	}
@@ -522,7 +593,74 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	@Override
 	public boolean delete(T data) 
 	{
-		return false;
+		RBTNode<T> childNode = null;
+		RBTNode<T> parentNode = null;
+		boolean color = false;
+		
+		// 1 查询待删数据项.
+		RBTNode<T> node = find(data);
+		
+		// 2 查询待删数据项是否存在.
+		if (null == node) 
+		{
+			return false;
+		}
+		
+		// 3 根据待删节点的孩子情况进行处理.
+		if (null != node.getLeftChild() && null != node.getRightChild()) 
+		{
+			// 当待删除的节点有两个孩子节点时.
+			
+		} 
+		else 
+		{
+			// 当待删除的节点是叶节点或其孩子节点只有一个时，直接删除，并将其孩子节点和父节点建立关系，后根据其颜色修正平衡.
+			parentNode = node.getParentNode();
+			color = node.getColor();
+			
+			// 查找其孩子.
+			if (null != node.getLeftChild()) 
+			{
+				childNode = node.getLeftChild();
+			} 
+			else 
+			{
+				childNode = node.getRightChild();
+			}
+			
+			// 左孩子或右孩子不为空时，将它的父节点设置为孩子的父节点.
+			if (null != childNode) 
+			{
+				childNode.setParentNode(parentNode);
+			}
+			
+			// node不是根节点，将其父节点指向它的联系指向其孩子节点.
+			if (null != parentNode) 
+			{
+				// node是左孩子，则将node的父节点的左孩子设置为node的孩子.
+				if (parentNode.getLeftChild() == node) 
+				{
+					parentNode.setLeftChild(childNode);
+				} 
+				else 
+				{
+					parentNode.setRightChild(childNode);
+				}
+			} 
+			else 
+			{
+				root = childNode;
+			}
+			
+			// 当待删除的node节点是黑色节点，则需要修正平衡.
+			if (color == RBTConstant.BLACK) 
+			{
+				removeFix(node, parentNode);
+			}
+			
+		}
+		
+		return true;
 	}
 
 	@Override
