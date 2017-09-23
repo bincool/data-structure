@@ -298,7 +298,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	 */
 	private void accessNode(RBTNode<T> rNode) 
 	{
-		LOGGER.info(rNode.toString());
+		LOGGER.info(rNode);
 	}
 	
 	/**
@@ -566,14 +566,27 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	 * 
 	* @Title: removeFix 
 	* @Description: 红黑树删除修正函数，在向红黑树删除节点之后，将其重新构造成一棵红黑树.
-	* @param @param node 设定文件. 
+	* @param @param node
+	* @param @param pNode 设定文件. 
 	* @return void 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	private void removeFix(RBTNode<T> node, RBTNode<T> paretNode) 
+	private void removeFix(RBTNode<T> node, RBTNode<T> pNode) 
 	{
-		
+		while ((null == node || isBlack(node)) && (node != root)) 
+		{
+			
+			if (pNode.getLeftChild() == node) 
+			{
+				
+			} 
+			else 
+			{
+				
+			}
+			
+		}
 	}
 
 	@Override
@@ -662,8 +675,8 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	@Override
 	public boolean delete(T data) 
 	{
-		RBTNode<T> childNode = null;
-		RBTNode<T> parentNode = null;
+		RBTNode<T> cNode = null;
+		RBTNode<T> pNode = null;
 		boolean color = false;
 		
 		// 1 查询待删数据项.
@@ -678,55 +691,113 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		// 3 根据待删节点的孩子情况进行处理.
 		if (null != node.getLeftChild() && null != node.getRightChild()) 
 		{
-			// 当待删除的节点有两个孩子节点时.
+			// 打印插入节点的前驱和后继节点.
+			LOGGER.info(getSuccessor(node));;
+			LOGGER.info(getPredecessor(node));
 			
+			// 当待删除的节点有两个孩子节点时.
+			RBTNode<T> successor = node.getRightChild();
+			
+			// 查找后继节点.
+			while (null != successor.getLeftChild()) 
+			{
+				successor = successor.getLeftChild();
+			}
+			
+			// node节点不是根节点.
+			if (null != parentNodeOf(node)) 
+			{
+				// 将node的父节点与node的后继节点建立父子关系.
+				if (node == parentNodeOf(node).getLeftChild()) 
+				{
+					parentNodeOf(node).setLeftChild(successor);
+				} 
+				else 
+				{
+					parentNodeOf(node).setRightChild(successor);
+				}
+			} 
+			else 
+			{
+				root = successor;
+			}
+			
+			// 后继节点的右孩子需要调整.
+			cNode = successor.getRightChild();
+			pNode = parentNodeOf(successor);
+			color = colorOf(successor);
+			
+			// 被删除的节点时它的后继节点的父节点.
+			if (pNode == node) 
+			{
+				pNode = successor;
+			} 
+			else 
+			{
+				// 后继节点的右孩子和后继节点的父节点建立父子关系.
+				if (null != cNode) 
+				{
+					setParentNode(cNode, pNode);
+				}
+				pNode.setLeftChild(cNode);
+				
+				// 后继节点和node的右孩子建立父子关系.
+				successor.setRightChild(node.getRightChild());
+				setParentNode(node.getRightChild(), successor);
+			}
+			
+			successor.setParentNode(node.getParentNode());
+			
+			successor.setColor(node.getColor());
+			
+			successor.setLeftChild(node.getLeftChild());
+			setParentNode(node.getLeftChild(), successor);
 		} 
 		else 
 		{
 			// 当待删除的节点是叶节点或其孩子节点只有一个时，直接删除，并将其孩子节点和父节点建立关系，后根据其颜色修正平衡.
-			parentNode = node.getParentNode();
+			pNode = node.getParentNode();
 			color = node.getColor();
 			
 			// 查找其孩子.
 			if (null != node.getLeftChild()) 
 			{
-				childNode = node.getLeftChild();
+				cNode = node.getLeftChild();
 			} 
 			else 
 			{
-				childNode = node.getRightChild();
+				cNode = node.getRightChild();
 			}
 			
 			// 左孩子或右孩子不为空时，将它的父节点设置为孩子的父节点.
-			if (null != childNode) 
+			if (null != cNode) 
 			{
-				childNode.setParentNode(parentNode);
+				cNode.setParentNode(pNode);
 			}
 			
 			// node不是根节点，将其父节点指向它的联系指向其孩子节点.
-			if (null != parentNode) 
+			if (null != pNode) 
 			{
 				// node是左孩子，则将node的父节点的左孩子设置为node的孩子.
-				if (parentNode.getLeftChild() == node) 
+				if (pNode.getLeftChild() == node) 
 				{
-					parentNode.setLeftChild(childNode);
+					pNode.setLeftChild(cNode);
 				} 
 				else 
 				{
-					parentNode.setRightChild(childNode);
+					pNode.setRightChild(cNode);
 				}
 			} 
 			else 
 			{
-				root = childNode;
+				root = cNode;
 			}
-			
-			// 当待删除的node节点是黑色节点，则需要修正平衡.
-			if (color == RBTConstant.BLACK) 
-			{
-				removeFix(node, parentNode);
-			}
-			
+		}
+		
+		// 当待删除的node节点或移除的后继节点是黑色节点，则需要修正平衡.
+		if (color == RBTConstant.BLACK) 
+		{
+			removeFix(cNode, pNode);
 		}
 		
 		return true;
