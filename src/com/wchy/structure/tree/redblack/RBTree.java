@@ -1,7 +1,5 @@
 package com.wchy.structure.tree.redblack;
 
-import javax.xml.soap.Node;
-
 import org.apache.log4j.Logger;
 
 import com.wchy.structure.common.utils.CompareIntf;
@@ -486,13 +484,89 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	 */
 	private void insertFix(RBTNode<T> node) 
 	{
+		RBTNode<T> pNode = parentNodeOf(node);
+		RBTNode<T> gNode = null;
 		
+		// 若父节点存在，且父节点的颜色是红色.
+		while (null != pNode && isRed(pNode)) 
+		{
+			gNode = parentNodeOf(pNode);
+			
+			// 根据父节点的位置进行分情况处理.
+			if (pNode == gNode.getLeftChild()) 
+			{
+				// 若父节点是祖父节点的左孩子.
+				RBTNode<T> uNode = gNode.getRightChild();
+				
+				// 根据叔叔节点的颜分情况处理.
+				if (null != uNode && isRed(uNode)) 
+				{
+					// 1 叔叔节点时红色.
+					setBlack(uNode);
+					setBlack(pNode);
+					setRed(gNode);
+					node = gNode;
+				} 
+				else 
+				{
+					// 2 叔叔节点时黑色，且当前节点时右孩子.
+					if (pNode.getRightChild() == node) 
+					{
+						leftRotate(pNode);
+						RBTNode<T> tmp = pNode;
+						pNode = node;
+						node = tmp;
+					}
+					
+					// 3 叔叔节点时黑色，且当前节点是左孩子.
+					setBlack(pNode);
+					setRed(gNode);
+					rightRotate(gNode);
+				}
+			} 
+			else 
+			{
+				// 父节点是祖父节点的右孩子.
+				RBTNode<T> uNode = gNode.getLeftChild();
+				
+				// 根据叔叔节点的颜分情况处理.
+				if (null != uNode && isRed(uNode)) 
+				{
+					// 1 叔叔节点时红色.
+					setBlack(uNode);
+					setBlack(pNode);
+					setRed(gNode);
+					node = gNode;
+				} 
+				else 
+				{
+					// 2 叔叔节点时黑色，且当前节点是左孩子.
+					if (pNode.getLeftChild() == node) 
+					{
+						rightRotate(pNode);
+						RBTNode<T> tmp = pNode;
+						pNode = node;
+						node = tmp;
+					}
+					
+					// 3 叔叔节点时黑色，且当前节点是右孩子.
+					setBlack(pNode);
+					setRed(gNode);
+					leftRotate(gNode);
+				}
+			}
+			
+			pNode = parentNodeOf(node);
+		} 
+		
+		// 将根节点设置为黑色.
+		setBlack(root);
 	}
 	
 	/**
 	 * 
 	* @Title: removeFix 
-	* @Description: 红黑树删除修正函数，在向红黑树删除节点之后调整平衡，将其重新构造成一棵红黑树.
+	* @Description: 红黑树删除修正函数，在向红黑树删除节点之后，将其重新构造成一棵红黑树.
 	* @param @param node 设定文件. 
 	* @return void 返回类型 .
 	* @throws 
