@@ -456,7 +456,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		// 如果xNode存在左孩子，则xNode的前驱节点为以其左孩子为根的子树的最大节点.
 		if (null != xNode.getLeftChild()) 
 		{
-			return maximum(xNode);
+			return maximum(xNode.getLeftChild());
 		}
 		
 		// 如果xNode没有左孩子，则xNode有两种可能.
@@ -566,27 +566,116 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	 * 
 	* @Title: removeFix 
 	* @Description: 红黑树删除修正函数，在向红黑树删除节点之后，将其重新构造成一棵红黑树.
-	* @param @param node
+	* @param @param cNode
 	* @param @param pNode 设定文件. 
 	* @return void 返回类型 .
 	* @throws 
 	* 		异常.
 	 */
-	private void removeFix(RBTNode<T> node, RBTNode<T> pNode) 
+	private void removeFix(RBTNode<T> cNode, RBTNode<T> pNode) 
 	{
-		while ((null == node || isBlack(node)) && (node != root)) 
+		// cNode的兄弟节点.
+		RBTNode<T> bNode = null;
+		
+		// 当cNode为黑节点且不为根节点时，意味着pNode包含cNode的子树到其子孙节点违背红黑树性质5.
+		while ((null == cNode || isBlack(cNode)) && (cNode != root)) 
 		{
-			
-			if (pNode.getLeftChild() == node) 
+			if (pNode.getLeftChild() == cNode) 
 			{
+				// cNode为左孩子，其兄弟节点为右孩子.
+				bNode = pNode.getRightChild();
 				
+				// 1 cNode的兄弟节点时红色的.
+				if (isRed(bNode)) 
+				{
+					// cNode的父节点和bNode的子节点都是黑节点.
+					setBlack(bNode);
+					setRed(pNode);
+					// 对pNode进行左旋.
+					leftRotate(pNode);
+					// bNode为黑节点了.
+					bNode = pNode.getRightChild();
+				}
+				
+				// 2 cNode的兄弟节点没红孩子节点.
+				if ((null == bNode.getLeftChild() || isBlack(bNode.getLeftChild())) && 
+						(null == bNode.getRightChild() || isBlack(bNode.getRightChild()))) 
+				{
+					setRed(bNode);
+					cNode = pNode;
+					pNode = parentNodeOf(cNode);
+				} 
+				else 
+				{
+					if (null == bNode.getRightChild() || isBlack(bNode.getRightChild())) 
+					{
+						// 3 cNode的兄弟节点时黑色的，并且左孩子是红，右孩子是黑.
+						setBlack(bNode.getLeftChild());
+						setRed(bNode);
+						rightRotate(bNode);
+						// bNode为黑节点了,其右孩子为红，左孩子颜色未知.
+						bNode = pNode.getRightChild();
+					}
+					setColor(bNode, colorOf(pNode));
+					setBlack(pNode);
+					setBlack(bNode.getRightChild());
+					leftRotate(pNode);
+					cNode = root;
+					break;
+				}
 			} 
 			else 
 			{
+				// cNode为右孩子,其兄弟节点为左孩子.
+				bNode = pNode.getLeftChild();
 				
+				// cNode的兄弟节点时红色的.
+				if (isRed(bNode)) 
+				{
+					// cNode的父节点和bNode的子节点都是黑节点.
+					setBlack(bNode);
+					setRed(pNode);
+					// 对pNode进行右旋.
+					rightRotate(pNode);
+					// bNode为黑节点了.
+					bNode = pNode.getLeftChild();
+				}
+				
+				// cNode的兄弟节点没红孩子节点.
+				if ((null == bNode.getLeftChild() || isBlack(bNode.getLeftChild())) && 
+						(null == bNode.getRightChild() || isBlack(bNode.getRightChild()))) 
+				{
+					setRed(bNode);
+					cNode = pNode;
+					pNode = parentNodeOf(cNode);
+				} 
+				else 
+				{
+					if (null == bNode.getLeftChild() || isBlack(bNode.getLeftChild())) 
+					{
+						setBlack(bNode.getRightChild());
+						setRed(bNode);
+						leftRotate(bNode);
+						bNode = pNode.getLeftChild();
+					}
+					
+					setColor(bNode, colorOf(pNode));
+					setBlack(pNode);
+					setBlack(bNode.getLeftChild());
+					rightRotate(pNode);
+					cNode = root;
+					break;
+				}
 			}
 			
 		}
+		
+		// 当cNode为红节点时，由于删了一个黑节点，将其设置为黑节点即可;当cNode为根节点时，直接设置为黑节点.
+		if (null != cNode) 
+		{
+			setBlack(cNode);
+		}
+		
 	}
 
 	@Override
@@ -797,6 +886,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		// 当待删除的node节点或移除的后继节点是黑色节点，则需要修正平衡.
 		if (color == RBTConstant.BLACK) 
 		{
+			// 当node双子非空时，cNode为左孩子，否则cNode可能为左孩子也可能为右孩子.
 			removeFix(cNode, pNode);
 		}
 		
