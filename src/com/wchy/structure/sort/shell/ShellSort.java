@@ -6,18 +6,18 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName ShellSort.java
 * @Description 
 * <p>
-* Êı×Ö£ºÏ£¶ûÅÅĞò.
+* æ•°å­—ï¼šå¸Œå°”æ’åº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ22ÈÕ ÏÂÎç10:19:38.
+* @Date 2017å¹´8æœˆ22æ—¥ ä¸‹åˆ10:19:38.
 * 
 * @param <T>
  */
@@ -51,7 +51,7 @@ public class ShellSort<T extends Number> extends NumberSort<T>
 		{
 			for (i = h; i < size; i++) 
 			{
-				// ²åÈëÅÅĞò,×ó²à¶¼¾Ö²¿ÓĞĞò,×îÖÕµÄ×îĞ¡¼ä¸ôÎª1.
+				// æ’å…¥æ’åº,å·¦ä¾§éƒ½å±€éƒ¨æœ‰åº,æœ€ç»ˆçš„æœ€å°é—´éš”ä¸º1.
 				current = arr[i];
 				for (j = i; j > h -1 && compare(arr[j - h], current); j -= h)
 				{

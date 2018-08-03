@@ -13,35 +13,35 @@ import com.wchy.structure.tree.intf.Tree;
 * @ClassName BinaryTreeTest.java
 * @Description 
 * <p>
-* ¶ş²æÊ÷²âÊÔÀà.
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ28ÈÕ ÉÏÎç12:25:19.
+* @Date 2017ï¿½ï¿½8ï¿½ï¿½28ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½12:25:19.
 *
  */
 public class BinaryTreeTest 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(BinaryTreeTest.class);
 	
 	/**
-	 * ÁÙÊ±×Ö·û´®»º´æ¶ÔÏó.
+	 * ï¿½ï¿½Ê±ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private static final StringBuffer sb = new StringBuffer();
 	
 	/**
-	 * ¶ş²æÊ÷¶ÔÏó.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private Tree<Schedule> treeApp;
 

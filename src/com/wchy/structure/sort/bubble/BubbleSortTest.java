@@ -8,18 +8,18 @@ import com.wchy.structure.sort.base.SortTest;
 * @ClassName BubbleSortTest.java
 * @Description 
 * <p>
-* Êı×Ö£ºÃ°ÅİÅÅĞò²âÊÔÀà.
+* æ•°å­—ï¼šå†’æ³¡æ’åºæµ‹è¯•ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:41:05.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:41:05.
 *
  */
 public class BubbleSortTest extends SortTest<Integer>

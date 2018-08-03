@@ -9,51 +9,51 @@ import com.wchy.structure.link.bean.Link;
 * @ClassName FirstLastLink.java
 * @Description 
 * <p>
-* Ë«¶ËÁ´±í.
+* åŒç«¯é“¾è¡¨.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç12:30:23.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ12:30:23.
 *
  */
 public class FirstLastLink<T> 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(FirstLastLink.class);
 	
 	/**
-	 * ´òÓ¡×Ö·û´®£¬ÀûÓÃÍ¬Ò»¿é»º´æÇøÓò.
+	 * æ‰“å°å­—ç¬¦ä¸²ï¼Œåˆ©ç”¨åŒä¸€å—ç¼“å­˜åŒºåŸŸ.
 	 */
 	private static final StringBuffer sb = new StringBuffer();
 	
 	/**
-	 * Á´±íÍ·²¿.
+	 * é“¾è¡¨å¤´éƒ¨.
 	 */
 	private Link<T> first;
 	
 	/**
-	 * Á´±íÎ²²¿.
+	 * é“¾è¡¨å°¾éƒ¨.
 	 */
 	private Link<T> last;
 	
 	/**
 	 * 
 	* @Title: isEmpty 
-	* @Description: Á´±í¿Õ¼ì²é.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return boolean ·µ»ØÀàĞÍ .
+	* @Description: é“¾è¡¨ç©ºæ£€æŸ¥.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return boolean è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public boolean isEmpty() 
 	{
@@ -63,11 +63,11 @@ public class FirstLastLink<T>
 	/**
 	 * 
 	* @Title: insertFirst 
-	* @Description: Á´±íÍ·²¿²åÈëÊı¾İ½Úµã.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: é“¾è¡¨å¤´éƒ¨æ’å…¥æ•°æ®èŠ‚ç‚¹.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void insertFirst(T data) 
 	{
@@ -83,11 +83,11 @@ public class FirstLastLink<T>
 	/**
 	 * 
 	* @Title: insertLast 
-	* @Description: Á´±íÎ²²¿²åÈëÊı¾İ½Úµã.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: é“¾è¡¨å°¾éƒ¨æ’å…¥æ•°æ®èŠ‚ç‚¹.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void insertLast(T data) 
 	{
@@ -106,11 +106,11 @@ public class FirstLastLink<T>
 	/**
 	 * 
 	* @Title: deleteFirst 
-	* @Description: ²é¿´Á´±íÍ·²¿Êı¾İ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: æŸ¥çœ‹é“¾è¡¨å¤´éƒ¨æ•°æ®.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public T peekFirst() 
 	{
@@ -120,11 +120,11 @@ public class FirstLastLink<T>
 	/**
 	 * 
 	* @Title: deleteFirst 
-	* @Description: É¾³ıÁ´±íÍ·²¿Êı¾İ£¬µ÷ÓÃÇ°Ó¦½øĞĞ¿ÕÅĞ¶Ï.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: åˆ é™¤é“¾è¡¨å¤´éƒ¨æ•°æ®ï¼Œè°ƒç”¨å‰åº”è¿›è¡Œç©ºåˆ¤æ–­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public T deleteFirst() 
 	{
@@ -140,11 +140,11 @@ public class FirstLastLink<T>
 	/**
 	 * 
 	* @Title: display 
-	* @Description: ´òÓ¡Ë«¶ËÁ´±í.
-	* @param  Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: æ‰“å°åŒç«¯é“¾è¡¨.
+	* @param  è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void display() 
 	{

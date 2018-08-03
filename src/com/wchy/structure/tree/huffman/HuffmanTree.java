@@ -10,40 +10,40 @@ import com.wchy.structure.tree.bean.HuffmanNode;
 * @ClassName HuffmanTree.java
 * @Description 
 * <p>
-* ¹þ·òÂüÊ÷-×Ö·û±àÂë.
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºÓÃÓÅÏÈ¼¶¶ÓÁÐÊµÏÖ£¬ÆäÖÐÓÅÏÈ¼¶¶ÓÁÐµÄÄÚ²¿ÓÃÊý×éÊµÏÖ.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àý´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ3ÈÕ ÏÂÎç11:28:35.
+* @Date 2017ï¿½ï¿½9ï¿½ï¿½3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:28:35.
 *
  */
 public class HuffmanTree 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(HuffmanTree.class);
 	
 	/**
-	 * ×Ö·û´®»º´æ,´òÓ¡Ê¹ÓÃ.
+	 * ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ó¡Ê¹ï¿½ï¿½.
 	 */
 	private static final StringBuffer sb = new StringBuffer();
 	
 	/**
-	 * ¹þ·òÂüÊ÷¸ù½Úµã.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½.
 	 */
 	private HuffmanNode root;
 	
 	/**
-	 * ÓÅÏÈ¼¶¶ÓÁÐ.
+	 * ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private PriorityQueue<HuffmanNode> queue;
 	
@@ -53,7 +53,7 @@ public class HuffmanTree
 	}
 	
 	/**
-	 * ±éÀú¶þ²æÊ÷µÄ·½·¨.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½.
 	 */
 	private static enum OrderMethod 
 	{
@@ -71,11 +71,11 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: createTree 
-	* @Description: ´´½¨¹þ·òÂüÊ÷.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	public void createTree() 
 	{
@@ -101,11 +101,11 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: order 
-	* @Description: ±éÀú¹þ·òÂüÊ÷.
-	* @param @param methodType Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param @param methodType ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	public void order(String methodType) 
 	{
@@ -128,11 +128,11 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: accessNode 
-	* @Description: ·ÃÎÊ½Úµã.
-	* @param @param rNode Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½Ê½Úµï¿½.
+	* @param @param rNode ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void accessNode(HuffmanNode rNode) 
 	{
@@ -146,27 +146,27 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: inOrder 
-	* @Description: ÖÐÐò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void inOrder(HuffmanNode root) 
 	{
 		if (null != root) 
 		{
-			// ×ó×ÓÊý±éÀú.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (!isLeaf(root)) 
 			{
 				sb.append("0");
 			}
 			inOrder(root.getLeftChild());
 			
-			// Ò¶×Ó½Úµã·ÃÎÊ.
+			// Ò¶ï¿½Ó½Úµï¿½ï¿½ï¿½ï¿½.
 			accessNode(root);
 			
-			// ÓÒ×ÓÊ÷±éÀú.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (!isLeaf(root)) 
 			{
 				if (isLeaf(root.getRightChild())) 
@@ -185,27 +185,27 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: preOrder 
-	* @Description: Ç°Ðò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: Ç°ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void preOrder(HuffmanNode root) 
 	{
 		if (null != root) 
 		{
-			// Ò¶×Ó½Úµã·ÃÎÊ.
+			// Ò¶ï¿½Ó½Úµï¿½ï¿½ï¿½ï¿½.
 			accessNode(root);
 			
-			// ×ó×ÓÊý±éÀú.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (!isLeaf(root)) 
 			{
 				sb.append("0");
 			}
 			preOrder(root.getLeftChild());
 			
-			// ÓÒ×ÓÊ÷±éÀú.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (!isLeaf(root)) 
 			{
 				if (isLeaf(root.getRightChild())) 
@@ -224,24 +224,24 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: postOrder 
-	* @Description: ºóÐò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void postOrder(HuffmanNode root) 
 	{
 		if (null != root) 
 		{
-			// ×ó×ÓÊý±éÀú.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (!isLeaf(root)) 
 			{
 				sb.append("0");
 			}
 			postOrder(root.getLeftChild());
 			
-			// ÓÒ×ÓÊ÷±éÀú.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (!isLeaf(root)) 
 			{
 				if (isLeaf(root.getRightChild())) 
@@ -255,7 +255,7 @@ public class HuffmanTree
 			} 
 			postOrder(root.getRightChild());
 			
-			// Ò¶×Ó½Úµã·ÃÎÊ.
+			// Ò¶ï¿½Ó½Úµï¿½ï¿½ï¿½ï¿½.
 			accessNode(root);
 		}
 	}
@@ -263,12 +263,12 @@ public class HuffmanTree
 	/**
 	 * 
 	* @Title: isLeaf 
-	* @Description: ¼ì²é½ÚµãÊÇ·ñÊÇÒ¶½Úµã.
+	* @Description: ï¿½ï¿½ï¿½Úµï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ò¶ï¿½Úµï¿½.
 	* @param @param rNode
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean isLeaf(HuffmanNode rNode) 
 	{

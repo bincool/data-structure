@@ -8,18 +8,18 @@ import com.wchy.structure.sort.base.SortTest;
 * @ClassName ArrayParTest.java
 * @Description 
 * <p>
-* Êı×Ö£º»®·ÖËã·¨²âÊÔÀà.
+* æ•°å­—ï¼šåˆ’åˆ†ç®—æ³•æµ‹è¯•ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:44:08.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:44:08.
 *
  */
 public class ArrayParTest extends SortTest<Integer>

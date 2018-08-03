@@ -3,12 +3,12 @@ package com.wchy.structure.link.bean;
 public class Link<T> 
 {
 	/**
-	 * Êı×ÖÊı¾İ.
+	 * æ•°å­—æ•°æ®.
 	 */
 	private T data;
 	
 	/**
-	 * Êı×ÖÍ°½Úµã£¬Ö¸ÏòÏÂÒ»¸ö½Úµã.
+	 * æ•°å­—æ¡¶èŠ‚ç‚¹ï¼ŒæŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹.
 	 */
 	private Link<T> next;
 	
@@ -24,11 +24,11 @@ public class Link<T>
 	/**
 	 * 
 	* @Title: getData 
-	* @Description: »ñÈ¡Í°ÖĞµÄÊı¾İ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return T ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ¡¶ä¸­çš„æ•°æ®.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return T è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public T getData() 
 	{
@@ -38,11 +38,11 @@ public class Link<T>
 	/**
 	 * 
 	* @Title: setData 
-	* @Description: ÉèÖÃÍ°ÖĞµÄÊı¾İ.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ¡¶ä¸­çš„æ•°æ®.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setData(T data) 
 	{
@@ -52,11 +52,11 @@ public class Link<T>
 	/**
 	 * 
 	* @Title: getNext 
-	* @Description: »ñÈ¡ÏÂÒ»¸öÍ°½Úµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return Bucket<T> ·µ»ØÀàĞÍ .
+	* @Description: è·å–ä¸‹ä¸€ä¸ªæ¡¶èŠ‚ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return Bucket<T> è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public Link<T> getNext() 
 	{
@@ -66,11 +66,11 @@ public class Link<T>
 	/**
 	 * 
 	* @Title: setNext 
-	* @Description: ÉèÖÃÏÂÒ»¸öÍ°½Úµã.
-	* @param @param next Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®ä¸‹ä¸€ä¸ªæ¡¶èŠ‚ç‚¹.
+	* @param @param next è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setNext(Link<T> next) 
 	{

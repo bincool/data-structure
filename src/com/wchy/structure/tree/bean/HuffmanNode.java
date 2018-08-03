@@ -5,40 +5,40 @@ package com.wchy.structure.tree.bean;
 * @ClassName HuffmanNode.java
 * @Description 
 * <p>
-* ¹ş·òÂüÊ÷£º×Ö·û.
+* å“ˆå¤«æ›¼æ ‘ï¼šå­—ç¬¦.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö:¶ÔÒ»´®×Ö·û½øĞĞÍ³¼ÆÈ¨ÖØ£¬½øĞĞ¹ş·òÂüÊ÷¹¹Ôì£¬ºóÆÚµÄÊı¾İ±ØĞëT extends Comparable.
+* è¯¦ç»†æè¿°:å¯¹ä¸€ä¸²å­—ç¬¦è¿›è¡Œç»Ÿè®¡æƒé‡ï¼Œè¿›è¡Œå“ˆå¤«æ›¼æ ‘æ„é€ ï¼ŒåæœŸçš„æ•°æ®å¿…é¡»T extends Comparable.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ3ÈÕ ÏÂÎç8:50:23.
+* @Date 2017å¹´9æœˆ3æ—¥ ä¸‹åˆ8:50:23.
 *
  */
 public class HuffmanNode
 {
 	
 	/**
-	 * ×Ö·û.
+	 * å­—ç¬¦.
 	 */
 	private char data;
 	
 	/**
-	 * ×Ö·û³öÏÖµÄÈ¨ÖØ.
+	 * å­—ç¬¦å‡ºç°çš„æƒé‡.
 	 */
 	private int weight;
 	
 	/**
-	 * ×óº¢×Ó.
+	 * å·¦å­©å­.
 	 */
 	private HuffmanNode leftChild;
 	
 	/**
-	 * ÓÒº¢×Ó.
+	 * å³å­©å­.
 	 */
 	private HuffmanNode rightChild;
 	
@@ -55,11 +55,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: getData 
-	* @Description: »ñÈ¡×Ö·ûÊı¾İ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return char ·µ»ØÀàĞÍ .
+	* @Description: è·å–å­—ç¬¦æ•°æ®.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return char è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public char getData() 
 	{
@@ -69,11 +69,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: setData 
-	* @Description: ÉèÖÃ×Ö·ûÊı¾İ.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å­—ç¬¦æ•°æ®.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setData(char data) 
 	{
@@ -83,11 +83,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: getWeight 
-	* @Description: »ñÈ¡È¨ÖØ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: è·å–æƒé‡.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public int getWeight() 
 	{
@@ -97,11 +97,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: setWeight 
-	* @Description: ÉèÖÃÈ¨ÖØ.
-	* @param @param weight Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æƒé‡.
+	* @param @param weight è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setWeight(int weight) 
 	{
@@ -111,11 +111,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: getLeftChild 
-	* @Description: »ñÈ¡×óº¢×Ó.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return HuffmanNode ·µ»ØÀàĞÍ .
+	* @Description: è·å–å·¦å­©å­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return HuffmanNode è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public HuffmanNode getLeftChild() 
 	{
@@ -125,11 +125,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: setLeftChild 
-	* @Description: ÉèÖÃ×óº¢×Ó.
-	* @param @param leftChild Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å·¦å­©å­.
+	* @param @param leftChild è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setLeftChild(HuffmanNode leftChild) 
 	{
@@ -139,11 +139,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: getRightChild 
-	* @Description: »ñÈ¡ÓÒº¢×Ó.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return HuffmanNode ·µ»ØÀàĞÍ .
+	* @Description: è·å–å³å­©å­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return HuffmanNode è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public HuffmanNode getRightChild() 
 	{
@@ -153,11 +153,11 @@ public class HuffmanNode
 	/**
 	 * 
 	* @Title: setRightChild 
-	* @Description: ÉèÖÃÓÒº¢×Ó.
-	* @param @param rightChild Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å³å­©å­.
+	* @param @param rightChild è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setRightChild(HuffmanNode rightChild) 
 	{

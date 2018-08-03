@@ -7,18 +7,18 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName BubbleSort.java
 * @Description 
 * <p>
-* Êı×Ö£ºÃ°ÅİÅÅĞò.
+* æ•°å­—ï¼šå†’æ³¡æ’åº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:40:37.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:40:37.
 * 
 * @param <T>
  */
@@ -40,7 +40,7 @@ public class BubbleSort<T extends Number> extends NumberSort<T>
 	{
 		Number[] arr = this.getArr();
 		
-		// Ã°ÅİÅÅĞò£¬Íâ²ãÑ­»·1~size-1;ÄÚ²ãÑ­»·0-size-2
+		// å†’æ³¡æ’åºï¼Œå¤–å±‚å¾ªç¯1~size-1;å†…å±‚å¾ªç¯0-size-2
 		for (int i = this.getSize() - 1; i > 0; i--) 
 		{
 			for (int j = 0; j < i; j++) 

@@ -8,18 +8,18 @@ import com.wchy.structure.tree.constants.RBTConstant;
 * @ClassName RBTNode.java
 * @Description 
 * <p>
-* ºìºÚÊ÷.
+* çº¢é»‘æ ‘.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ17ÈÕ ÏÂÎç2:45:47.
+* @Date 2017å¹´9æœˆ17æ—¥ ä¸‹åˆ2:45:47.
 * 
 * @param <T>
  */
@@ -27,38 +27,38 @@ public class RBTNode<T extends CompareIntf<T>>
 {
 	
 	/**
-	 * ½ÚµãÊı¾İ.
+	 * èŠ‚ç‚¹æ•°æ®.
 	 */
     private T data;
     
     /**
-     * ×óº¢×Ó.
+     * å·¦å­©å­.
      */
     private RBTNode<T> leftChild;
     
     /**
-     * ÓÒº¢×Ó.
+     * å³å­©å­.
      */
     private RBTNode<T> rightChild;
     
     /**
-     * ¸¸½Úµã.
+     * çˆ¶èŠ‚ç‚¹.
      */
     private RBTNode<T> parentNode;
     
     /**
-     * ½ÚµãÑÕÉ«,Ä¬ÈÏÎªºÚÉ«.
+     * èŠ‚ç‚¹é¢œè‰²,é»˜è®¤ä¸ºé»‘è‰².
      */
     private boolean color = RBTConstant.BLACK;
 
     /**
      * 
     * @Title: getData 
-    * @Description: »ñÈ¡½ÚµãÊı¾İ.
-    * @param @return Éè¶¨ÎÄ¼ş. 
-    * @return T ·µ»ØÀàĞÍ .
+    * @Description: è·å–èŠ‚ç‚¹æ•°æ®.
+    * @param @return è®¾å®šæ–‡ä»¶. 
+    * @return T è¿”å›ç±»å‹ .
     * @throws 
-    * 		Òì³£.
+    * 		å¼‚å¸¸.
      */
 	public T getData() 
 	{
@@ -68,11 +68,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: setData 
-	* @Description: ÉèÖÃ½ÚµãÊı¾İ.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®èŠ‚ç‚¹æ•°æ®.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setData(T data) 
 	{
@@ -82,11 +82,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: getLeft 
-	* @Description: »ñÈ¡×óº¢×Ó.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return RBTNode<T> ·µ»ØÀàĞÍ .
+	* @Description: è·å–å·¦å­©å­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return RBTNode<T> è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public RBTNode<T> getLeftChild() 
 	{
@@ -96,11 +96,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: setLeft 
-	* @Description: ÉèÖÃ×óº¢×Ó.
-	* @param @param left Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å·¦å­©å­.
+	* @param @param left è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setLeftChild(RBTNode<T> leftChild) 
 	{
@@ -110,11 +110,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: getRight 
-	* @Description: »ñÈ¡ÓÒº¢×Ó.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return RBTNode<T> ·µ»ØÀàĞÍ .
+	* @Description: è·å–å³å­©å­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return RBTNode<T> è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public RBTNode<T> getRightChild() 
 	{
@@ -124,11 +124,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: setRight 
-	* @Description: ÉèÖÃÓÒº¢×Ó.
-	* @param @param right Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å³å­©å­.
+	* @param @param right è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setRightChild(RBTNode<T> rightChild) 
 	{
@@ -138,11 +138,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: getParent 
-	* @Description: »ñÈ¡¸¸½Úµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return RBTNode<T> ·µ»ØÀàĞÍ .
+	* @Description: è·å–çˆ¶èŠ‚ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return RBTNode<T> è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public RBTNode<T> getParentNode() 
 	{
@@ -152,11 +152,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: setParent 
-	* @Description: ÉèÖÃ¸¸½Úµã.
-	* @param @param parent Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®çˆ¶èŠ‚ç‚¹.
+	* @param @param parent è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setParentNode(RBTNode<T> parentNode) 
 	{
@@ -166,11 +166,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: setColor 
-	* @Description: »ñÈ¡½ÚµãÑÕÉ«.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return boolean ·µ»ØÀàĞÍ .
+	* @Description: è·å–èŠ‚ç‚¹é¢œè‰².
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return boolean è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public boolean getColor() 
 	{
@@ -180,11 +180,11 @@ public class RBTNode<T extends CompareIntf<T>>
 	/**
 	 * 
 	* @Title: getColor 
-	* @Description: ÉèÖÃ½ÚµãÑÕÉ«.
-	* @param @param color Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®èŠ‚ç‚¹é¢œè‰².
+	* @param @param color è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setColor(boolean color) 
 	{

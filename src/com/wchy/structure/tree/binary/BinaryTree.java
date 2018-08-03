@@ -11,18 +11,18 @@ import com.wchy.structure.tree.intf.Tree;
 * @ClassName BinaryTree.java
 * @Description 
 * <p>
-* ¶þ²æÊ÷.
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àý´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç8:01:23.
+* @Date 2017ï¿½ï¿½8ï¿½ï¿½27ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½8:01:23.
 * 
 * @param <T>
  */
@@ -30,12 +30,12 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private final static Logger LOGGER = Logger.getLogger(BinaryTree.class);
 	
 	/**
-	 * ±éÀú¶þ²æÊ÷µÄ·½·¨.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½.
 	 */
 	private static enum OrderMethod 
 	{
@@ -51,7 +51,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	}
 	
 	/**
-	 * ¶þ²æÊ÷¸ù½Úµã.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½.
 	 */
 	private TreeNode<T> root;
 
@@ -73,7 +73,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 				parent = current;
 				if (compare(current.getData(), data)) 
 				{
-					// ×ó×ÓÊ÷ÖÐ.
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 					current = current.getLeftChild();
 					if (null == current) 
 					{
@@ -83,7 +83,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 				} 
 				else 
 				{
-					// ÓÒ×ÓÊ÷ÖÐ.
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 					current = current.getRightChild();
 					if (null == current) 
 					{
@@ -138,7 +138,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 		} 
 		else 
 		{
-			// 1 ²éÕÒÒªÉ¾³ýµÄ½Úµã£¬ÕÒ²»µ½·µ»Øfalse.
+			// 1 ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ä½Úµã£¬ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½false.
 			while (!isEquals(current.getData(), data)) 
 			{
 				parent = current;
@@ -158,7 +158,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 				}
 			}
 			
-			// 2 ¼ì²é½ÚµãÊÇ·ñÊÇÒ¶½Úµã£¬ÒÑ¾­¼ì²é½ÚµãÊÇ·ñÊÇ¸ù.
+			// 2 ï¿½ï¿½ï¿½Úµï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ò¶ï¿½Úµã£¬ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½Ç·ï¿½ï¿½Ç¸ï¿½.
 			if (isLeaf(current)) 
 			{
 				if (current == root) 
@@ -174,7 +174,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 					parent.setRightChild(null);
 				}
 			} 
-			// 2.1 ÓÐÒ»¸ö×óº¢×Ó½Úµã.
+			// 2.1 ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ó½Úµï¿½.
 			else if (null == current.getRightChild()) 
 			{
 				if (current == root) 
@@ -190,7 +190,7 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 					parent.setRightChild(current.getLeftChild());
 				}
 			} 
-			// 2.2 ÓÐÒ»¸öÓÒº¢×Ó½Úµã.
+			// 2.2 ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Òºï¿½ï¿½Ó½Úµï¿½.
 			else if (null == current.getLeftChild()) 
 			{
 				if (current == root) 
@@ -206,10 +206,10 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 					parent.setRightChild(current.getRightChild());
 				}
 			} 
-			// 2.3 ÓÐÁ½¸öº¢×Ó½Úµã.
+			// 2.3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½Úµï¿½.
 			else 
 			{
-				// 2.3.1 ²éÕÒºó¼Ì½Úµã.
+				// 2.3.1 ï¿½ï¿½ï¿½Òºï¿½Ì½Úµï¿½.
 				TreeNode<T> successor = getSuccessor(current);
 				if (current == root) 
 				{
@@ -278,14 +278,14 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: compare 
-	* @Description: ±È½ÏÈÕ³Ì±íµÄ¿ªÊ¼Ê±¼ä.
+	* @Description: ï¿½È½ï¿½ï¿½Õ³Ì±ï¿½Ä¿ï¿½Ê¼Ê±ï¿½ï¿½.
 	* @param @param a
 	* @param @param b
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
-	* 		true:aµÄ¿ªÊ¼Ê±¼äÍíÓÚb.false:bµÄÊ±¼äÔçµÈÓÚa.
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
+	* 		true:aï¿½Ä¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½b.false:bï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a.
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean compare(Schedule a, Schedule b) 
 	{
@@ -295,14 +295,14 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: compare 
-	* @Description: ±È½ÏÈÕ³Ì±íµÄ¿ªÊ¼Ê±¼ä.
+	* @Description: ï¿½È½ï¿½ï¿½Õ³Ì±ï¿½Ä¿ï¿½Ê¼Ê±ï¿½ï¿½.
 	* @param @param a
 	* @param @param b
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
-	* 		true:aµÄ¿ªÊ¼Ê±¼äÍíÓÚb.false:bµÄÊ±¼äÔçµÈÓÚa.
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
+	* 		true:aï¿½Ä¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½b.false:bï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a.
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean isEquals(Schedule a, Schedule b) 
 	{
@@ -312,12 +312,12 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: isLeaf 
-	* @Description: ¼ì²é½ÚµãÊÇ·ñÊÇÒ¶½Úµã.
+	* @Description: ï¿½ï¿½ï¿½Úµï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ò¶ï¿½Úµï¿½.
 	* @param @param rNode
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean isLeaf(TreeNode<T> rNode) 
 	{
@@ -327,13 +327,13 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: getSuccessor 
-	* @Description: ÕÒ½ÚµãµÄºó¼Ì½Úµã.
+	* @Description: ï¿½Ò½Úµï¿½Äºï¿½Ì½Úµï¿½.
 	* @param @param rNode
-	* 		º¬ÓÒº¢×Ó½Úµã.
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return TreeNode<T> ·µ»ØÀàÐÍ .
+	* 		ï¿½ï¿½ï¿½Òºï¿½ï¿½Ó½Úµï¿½.
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return TreeNode<T> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private TreeNode<T> getSuccessor(TreeNode<T> rNode) 
 	{
@@ -358,11 +358,11 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: accessNode 
-	* @Description: ·ÃÎÊ½Úµã.
-	* @param @param rNode Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½Ê½Úµï¿½.
+	* @param @param rNode ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void accessNode(TreeNode<T> rNode) 
 	{
@@ -372,11 +372,11 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: inOrder 
-	* @Description: ÖÐÐò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void inOrder(TreeNode<T> root) 
 	{
@@ -391,11 +391,11 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: preOrder 
-	* @Description: Ç°Ðò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: Ç°ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void preOrder(TreeNode<T> root) 
 	{
@@ -410,11 +410,11 @@ public class BinaryTree<T extends Schedule> implements Tree<T>
 	/**
 	 * 
 	* @Title: postOrder 
-	* @Description: ºóÐò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void postOrder(TreeNode<T> root) 
 	{

@@ -12,18 +12,18 @@ import com.wchy.structure.tree.intf.Tree;
 * @ClassName RBTree.java
 * @Description 
 * <p>
-* ºìºÚÊ÷.
+* ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àý´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ17ÈÕ ÏÂÎç3:38:39.
+* @Date 2017ï¿½ï¿½9ï¿½ï¿½17ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½3:38:39.
 * 
 * @param <T>
  */
@@ -31,12 +31,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(RBTree.class);
 	
 	/**
-	 * ±éÀú¶þ²æÊ÷µÄ·½·¨.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½.
 	 */
 	private static enum OrderMethod 
 	{
@@ -52,19 +52,19 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	}
 	
 	/**
-	 * ¸ù½Úµã.
+	 * ï¿½ï¿½ï¿½Úµï¿½.
 	 */
 	private RBTNode<T> root;
 	
 	/**
 	 * 
 	* @Title: parentOf 
-	* @Description: »ñÈ¡½Úµã¸¸½Úµã.
+	* @Description: ï¿½ï¿½È¡ï¿½Úµã¸¸ï¿½Úµï¿½.
 	* @param @param node
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return RBTNode<T> ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return RBTNode<T> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private RBTNode<T> parentNodeOf(RBTNode<T> node) 
 	{
@@ -74,12 +74,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: colorOf 
-	* @Description: »ñÈ¡½ÚµãÑÕÉ«.
+	* @Description: ï¿½ï¿½È¡ï¿½Úµï¿½ï¿½ï¿½É«.
 	* @param @param node
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean colorOf(RBTNode<T> node) 
 	{
@@ -89,12 +89,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: isRed 
-	* @Description: ½ÚµãÊÇºìÉ«µÄ.
+	* @Description: ï¿½Úµï¿½ï¿½Çºï¿½É«ï¿½ï¿½.
 	* @param @param node
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean isRed(RBTNode<T> node) 
 	{
@@ -104,12 +104,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: isRed 
-	* @Description: ½ÚµãÊÇºÚÉ«µÄ.
+	* @Description: ï¿½Úµï¿½ï¿½Çºï¿½É«ï¿½ï¿½.
 	* @param @param node
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return boolean ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return boolean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private boolean isBlack(RBTNode<T> node) 
 	{
@@ -119,11 +119,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: setRed 
-	* @Description: ½«½ÚµãÉèÖÃÎªºìÉ«.
-	* @param @param node Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«.
+	* @param @param node ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void setRed(RBTNode<T> node) 
 	{
@@ -136,11 +136,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: setBlack 
-	* @Description: ½«½ÚµãÉèÖÃÎªºÚÉ«.
-	* @param @param node Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«.
+	* @param @param node ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void setBlack(RBTNode<T> node) 
 	{
@@ -153,12 +153,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: setParentNode 
-	* @Description: ÉèÖÃ½ÚµãµÄ¸¸½Úµã.
+	* @Description: ï¿½ï¿½ï¿½Ã½Úµï¿½Ä¸ï¿½ï¿½Úµï¿½.
 	* @param @param node
-	* @param @param parentNode Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @param @param parentNode ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void setParentNode(RBTNode<T> node, RBTNode<T> parentNode) 
 	{
@@ -171,12 +171,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: setColor 
-	* @Description: ÉèÖÃ½ÚµãÑÕÉ«.
+	* @Description: ï¿½ï¿½ï¿½Ã½Úµï¿½ï¿½ï¿½É«.
 	* @param @param node
-	* @param @param color Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @param @param color ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void setColor(RBTNode<T> node, boolean color) 
 	{
@@ -189,100 +189,100 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: leftRotate 
-	* @Description: ¶ÔºìºÚÊ÷µÄ½ÚµãxNode½øÐÐ×óÐý×ª,Ç°ÌáÌõ¼þÊÇxNodeµÄÓÒº¢×Ó´æÔÚ.
-	* @param @param xNode Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½Ä½Úµï¿½xNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ª,Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½Òºï¿½ï¿½Ó´ï¿½ï¿½ï¿½.
+	* @param @param xNode ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void leftRotate(RBTNode<T> xNode) 
 	{
-		// 1 ÕÒµ½xNodeµÄÓÒº¢×ÓyNode.
+		// 1 ï¿½Òµï¿½xNodeï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½yNode.
 		RBTNode<T> yNode = xNode.getRightChild();
 		
-		// 2 ÉèÖÃxNodeµÄÓÒº¢×ÓÎªyNodeµÄ×óº¢×Ó£¬yNode×óº¢×ÓµÄ¸¸½ÚµãÎªxNode.
+		// 2 ï¿½ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½ÎªyNodeï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½yNodeï¿½ï¿½ï¿½ÓµÄ¸ï¿½ï¿½Úµï¿½ÎªxNode.
 		xNode.setRightChild(yNode.getLeftChild());
 		if (null != yNode.getLeftChild()) 
 		{
 			yNode.getLeftChild().setParentNode(xNode);
 		}
 		
-		// ½«yNode½ÚµãµÄ¸¸½ÚµãÉèÖÃÎªxNodeµÄ¸¸½Úµã.
+		// ï¿½ï¿½yNodeï¿½Úµï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ÎªxNodeï¿½Ä¸ï¿½ï¿½Úµï¿½.
 		yNode.setParentNode(xNode.getParentNode());
 		if (null == xNode.getParentNode()) 
 		{
-			// Èç¹ûxNodeµÄ¸¸½ÚµãÎªnull£¬Ôò½«yNodeÉèÖÃÎª¸ù.
+			// ï¿½ï¿½ï¿½xNodeï¿½Ä¸ï¿½ï¿½Úµï¿½Îªnullï¿½ï¿½ï¿½ï¿½yNodeï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½.
 			root = yNode;
 		} 
 		else 
 		{
-			// Èç¹ûxNodeÊÇÆä¸¸½ÚµãµÄ×óº¢×Ó.
+			// ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ä¸¸ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (xNode == xNode.getParentNode().getLeftChild()) 
 			{
-				// ½«yNodeÉèÖÃÎªxNode¸¸½ÚµãµÄ×óº¢×Ó.
+				// ï¿½ï¿½yNodeï¿½ï¿½ï¿½ï¿½ÎªxNodeï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 				xNode.getParentNode().setLeftChild(yNode);
 			} 
 			else 
 			{
-				// ½«yNodeÉèÖÃÎªxNode¸¸½ÚµãµÄÓÒº¢×Ó.
+				// ï¿½ï¿½yNodeï¿½ï¿½ï¿½ï¿½ÎªxNodeï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½.
 				xNode.getParentNode().setRightChild(yNode);
 			}
 		}
 		
-		// ½«xNodeÉèÎªyNodeµÄ×óº¢×Ó¡±.
+		// ï¿½ï¿½xNodeï¿½ï¿½ÎªyNodeï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½.
 		yNode.setLeftChild(xNode);
 		
-		// ½«xNodeµÄ¸¸½ÚµãÉèÖÃÎªyNode.
+		// ï¿½ï¿½xNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ÎªyNode.
 		xNode.setParentNode(yNode);
 	}
 	
 	/**
 	 * 
 	* @Title: rightRotate 
-	* @Description: ¶ÔºìºÚÊ÷µÄ½ÚµãyNode½øÐÐÓÒÐý×ª.
-	* @param @param yNode Éè¶¨ÎÄ¼þ.
-	* @return void ·µ»ØÀàÐÍ.
+	* @Description: ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½Ä½Úµï¿½yNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ª.
+	* @param @param yNode ï¿½è¶¨ï¿½Ä¼ï¿½.
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void rightRotate(RBTNode<T> yNode) 
 	{
-		// 1 ÕÒµ½yNodeµÄ×óº¢×Ó.
+		// 1 ï¿½Òµï¿½yNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 		RBTNode<T> xNode = yNode.getLeftChild();
 		
-		// 2 ÉèÖÃyNodeµÄ×óº¢×ÓÎªxNodeµÄÓÒº¢×Ó,xNodeÓÒº¢×ÓµÄ¸¸½ÚµãÎªyNode.
+		// 2 ï¿½ï¿½ï¿½ï¿½yNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªxNodeï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½,xNodeï¿½Òºï¿½ï¿½ÓµÄ¸ï¿½ï¿½Úµï¿½ÎªyNode.
 		yNode.setLeftChild(xNode.getRightChild());
 		if (null != xNode.getRightChild()) 
 		{
 			xNode.getRightChild().setParentNode(yNode);
 		}
 		
-		// 3 ÉèÖÃxNodeµÄ¸¸½ÚµãÎªyNodeµÄ¸¸½Úµã.
+		// 3 ï¿½ï¿½ï¿½ï¿½xNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ÎªyNodeï¿½Ä¸ï¿½ï¿½Úµï¿½.
 		xNode.setParentNode(yNode.getParentNode());
 		if (null == yNode.getParentNode()) 
 		{
-			// Èç¹ûyNodeµÄ¸¸½ÚµãÎª¿Õ£¬ÉèÖÃxNodeÎª¸ù½Úµã.
+			// ï¿½ï¿½ï¿½yNodeï¿½Ä¸ï¿½ï¿½Úµï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½ï¿½ï¿½xNodeÎªï¿½ï¿½ï¿½Úµï¿½.
 			root = xNode;
 		} 
 		else 
 		{
-			// Èç¹ûyNodeÊÇÆä¸¸½ÚµãµÄÓÒº¢×Ó.
+			// ï¿½ï¿½ï¿½yNodeï¿½ï¿½ï¿½ä¸¸ï¿½Úµï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½.
 			if (yNode == yNode.getParentNode().getRightChild()) 
 			{
-				// ÉèÖÃxNodeÎªyNodeµÄ¸¸½ÚµãµÄÓÒº¢×Ó.
+				// ï¿½ï¿½ï¿½ï¿½xNodeÎªyNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½.
 				yNode.getParentNode().setRightChild(xNode);
 			} 
 			else 
 			{
-				// ÉèÖÃxNodeÎªyNodeµÄ¸¸½ÚµãµÄ×óº¢×Ó.
+				// ï¿½ï¿½ï¿½ï¿½xNodeÎªyNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 				yNode.getParentNode().setLeftChild(xNode);
 			}
 		}
 		
-		// ½«yNodeÉèÎªxNodeµÄÓÒº¢×Ó.
+		// ï¿½ï¿½yNodeï¿½ï¿½ÎªxNodeï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½.
 		xNode.setRightChild(yNode);
 		
-		// ½«yNodeµÄ¸¸½ÚµãÉèÎªxNode.
+		// ï¿½ï¿½yNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ÎªxNode.
 		yNode.setParentNode(xNode);
 		
 	}
@@ -290,11 +290,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: accessNode 
-	* @Description: ·ÃÎÊ½Úµã.
-	* @param @param rNode Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½Ê½Úµï¿½.
+	* @param @param rNode ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void accessNode(RBTNode<T> rNode) 
 	{
@@ -304,11 +304,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: inOrder 
-	* @Description: ÖÐÐò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void inOrder(RBTNode<T> root) 
 	{
@@ -323,11 +323,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: preOrder 
-	* @Description: Ç°Ðò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: Ç°ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void preOrder(RBTNode<T> root) 
 	{
@@ -342,11 +342,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: postOrder 
-	* @Description: ºóÐò±éÀú.
-	* @param  Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+	* @param  ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void postOrder(RBTNode<T> root) 
 	{
@@ -361,12 +361,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: minimum 
-	* @Description: ²éÕÒÒÔtreeÎª¸ù½ÚµãµÄÊ÷µÄ×îÐ¡½Úµã.
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½treeÎªï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Úµï¿½.
 	* @param @param tree
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return RBTNode<T> ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return RBTNode<T> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private RBTNode<T> minimum(RBTNode<T> tree) 
 	{
@@ -387,12 +387,12 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: maximum 
-	* @Description: ²éÕÒÒÔtreeÎª¸ù½ÚµãµÄÊ÷µÄ×î´ó½Úµã.
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½treeÎªï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½.
 	* @param @param tree
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return RBTNode<T> ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return RBTNode<T> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private RBTNode<T> maximum(RBTNode<T> tree) 
 	{
@@ -413,24 +413,24 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: getSuccessor 
-	* @Description: »ñÈ¡xNode½ÚµãµÄºó¼Ì½Úµã£¬±ÈxNode´óµÄ×îÐ¡½Úµã.
+	* @Description: ï¿½ï¿½È¡xNodeï¿½Úµï¿½Äºï¿½Ì½Úµã£¬ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Úµï¿½.
 	* @param @param xNode
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return RBTree<T> ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return RBTree<T> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private RBTNode<T> getSuccessor(RBTNode<T> xNode) 
 	{
-		// Èç¹ûxNode´æÔÚÓÒº¢×Ó£¬ÔòxNodeµÄºó¼Ì½ÚµãÎªÒÔÆäÓÒº¢×ÓÎª¸ùµÄ×ÓÊ÷µÄ×îÐ¡½Úµã.
+		// ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½Ó£ï¿½ï¿½ï¿½xNodeï¿½Äºï¿½Ì½Úµï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Úµï¿½.
 		if (null != xNode.getRightChild()) 
 		{
 			return minimum(xNode.getRightChild());
 		}
 		
-		// Èç¹ûxNodeÃ»ÓÐÓÒº¢×Ó£¬ÔòxNodeÓÐÁ½ÖÖÇé¿ö.
-		// xNodeÊÇÒ»¸ö×óº¢×Ó£¬ÔòxNodeµÄºó¼Ì½ÚµãÎªËüµÄ¸¸½Úµã.
-		// xNodeÊÇÒ»¸öÓÒº¢ÔÚ£¬Ôò²éÕÒxNodeµÄ×îµÍµÄ¸¸½Úµã£¬²¢ÇÒÕâ¸ö×îµÍ¸¸½ÚµãÒª¾ßÓÐ×óº¢×Ó£¬ÕÒµ½Õâ¸ö×îµÍµÄ¸¸½Úµã¾ÍÊÇxNodeµÄºó¼Ì½Úµã.
+		// ï¿½ï¿½ï¿½xNodeÃ»ï¿½ï¿½ï¿½Òºï¿½ï¿½Ó£ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+		// xNodeï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½xNodeï¿½Äºï¿½Ì½Úµï¿½Îªï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Úµï¿½.
+		// xNodeï¿½ï¿½Ò»ï¿½ï¿½ï¿½Òºï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ÍµÄ¸ï¿½ï¿½Úµã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½Úµï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄ¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½xNodeï¿½Äºï¿½Ì½Úµï¿½.
 		RBTNode<T> yNode = xNode.getParentNode();
 		while ((null != yNode) && (yNode.getRightChild() == xNode)) 
 		{
@@ -444,24 +444,24 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: getPredecessor 
-	* @Description: ÕÒxNodeµÄÇ°Çý½Úµã£¬±ÈxNodeÐ¡µÄ×î´ó½Úµã.
+	* @Description: ï¿½ï¿½xNodeï¿½ï¿½Ç°ï¿½ï¿½ï¿½Úµã£¬ï¿½ï¿½xNodeÐ¡ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½.
 	* @param @param xNode
-	* @param @return Éè¶¨ÎÄ¼þ. 
-	* @return RBTNode<T> ·µ»ØÀàÐÍ .
+	* @param @return ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return RBTNode<T> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private RBTNode<T> getPredecessor(RBTNode<T> xNode) 
 	{
-		// Èç¹ûxNode´æÔÚ×óº¢×Ó£¬ÔòxNodeµÄÇ°Çý½ÚµãÎªÒÔÆä×óº¢×ÓÎª¸ùµÄ×ÓÊ÷µÄ×î´ó½Úµã.
+		// ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½xNodeï¿½ï¿½Ç°ï¿½ï¿½ï¿½Úµï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½.
 		if (null != xNode.getLeftChild()) 
 		{
 			return maximum(xNode.getLeftChild());
 		}
 		
-		// Èç¹ûxNodeÃ»ÓÐ×óº¢×Ó£¬ÔòxNodeÓÐÁ½ÖÖ¿ÉÄÜ.
-		// xNodeÊÇÒ»¸öÓÒº¢×Ó£¬ÔòxNodeµÄÇ°Çý½ÚµãÎªËüµÄ¸¸½Úµã.
-		// xNodeÊÇÒ»¸ö×óº¢×Ó£¬Ôò²éÕÒxNodeµÄ×îµÍµÄ¸¸½Úµã£¬²¢ÇÒ¸Ã¸¸½ÚµãµÄÒª¾ßÓÐÓÒº¢×Ó£¬ÕÒµ½Õâ¸ö×îµÍ¸¸½Úµã¾ÍÊÇxNodeÇ°Çý½Úµã.
+		// ï¿½ï¿½ï¿½xNodeÃ»ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ï¿½Ö¿ï¿½ï¿½ï¿½.
+		// xNodeï¿½ï¿½Ò»ï¿½ï¿½ï¿½Òºï¿½ï¿½Ó£ï¿½ï¿½ï¿½xNodeï¿½ï¿½Ç°ï¿½ï¿½ï¿½Úµï¿½Îªï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Úµï¿½.
+		// xNodeï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xNodeï¿½ï¿½ï¿½ï¿½ÍµÄ¸ï¿½ï¿½Úµã£¬ï¿½ï¿½ï¿½Ò¸Ã¸ï¿½ï¿½Úµï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½Ó£ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½xNodeÇ°ï¿½ï¿½ï¿½Úµï¿½.
 		RBTNode<T> yNode = xNode.getParentNode();
 		while ((null != yNode) && (yNode.getLeftChild() == xNode)) 
 		{
@@ -475,32 +475,32 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 	/**
 	 * 
 	* @Title: insertFix 
-	* @Description: ºìºÚÊ÷²åÈëÐÞÕýº¯Êý£¬ÔÚÏòºìºÚÊ÷²åÈë½ÚµãÖ®ºóµ÷ÕûÆ½ºâ£¬½«ÆäÖØÐÂ¹¹Ôì³ÉÒ»¿ÃºìºÚÊ÷.
-	* @param @param node Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ãºï¿½ï¿½ï¿½ï¿½.
+	* @param @param node ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void insertFix(RBTNode<T> node) 
 	{
 		RBTNode<T> pNode = parentNodeOf(node);
 		RBTNode<T> gNode = null;
 		
-		// Èô¸¸½Úµã´æÔÚ£¬ÇÒ¸¸½ÚµãµÄÑÕÉ«ÊÇºìÉ«.
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ú£ï¿½ï¿½Ò¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½É«ï¿½Çºï¿½É«.
 		while (null != pNode && isRed(pNode)) 
 		{
 			gNode = parentNodeOf(pNode);
 			
-			// ¸ù¾Ý¸¸½ÚµãµÄÎ»ÖÃ½øÐÐ·ÖÇé¿ö´¦Àí.
+			// ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½Úµï¿½ï¿½Î»ï¿½Ã½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			if (pNode == gNode.getLeftChild()) 
 			{
-				// Èô¸¸½ÚµãÊÇ×æ¸¸½ÚµãµÄ×óº¢×Ó.
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½æ¸¸ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 				RBTNode<T> uNode = gNode.getRightChild();
 				
-				// ¸ù¾ÝÊåÊå½ÚµãµÄÑÕ·ÖÇé¿ö´¦Àí.
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Õ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 				if (null != uNode && isRed(uNode)) 
 				{
-					// 1 ÊåÊå½ÚµãÊ±ºìÉ«.
+					// 1 ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½É«.
 					setBlack(uNode);
 					setBlack(pNode);
 					setRed(gNode);
@@ -508,7 +508,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 				} 
 				else 
 				{
-					// 2 ÊåÊå½ÚµãÊ±ºÚÉ«£¬ÇÒµ±Ç°½ÚµãÊ±ÓÒº¢×Ó.
+					// 2 ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½É«ï¿½ï¿½ï¿½Òµï¿½Ç°ï¿½Úµï¿½Ê±ï¿½Òºï¿½ï¿½ï¿½.
 					if (pNode.getRightChild() == node) 
 					{
 						leftRotate(pNode);
@@ -517,7 +517,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 						node = tmp;
 					}
 					
-					// 3 ÊåÊå½ÚµãÊ±ºÚÉ«£¬ÇÒµ±Ç°½ÚµãÊÇ×óº¢×Ó.
+					// 3 ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½É«ï¿½ï¿½ï¿½Òµï¿½Ç°ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 					setBlack(pNode);
 					setRed(gNode);
 					rightRotate(gNode);
@@ -525,13 +525,13 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 			} 
 			else 
 			{
-				// ¸¸½ÚµãÊÇ×æ¸¸½ÚµãµÄÓÒº¢×Ó.
+				// ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½æ¸¸ï¿½Úµï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½.
 				RBTNode<T> uNode = gNode.getLeftChild();
 				
-				// ¸ù¾ÝÊåÊå½ÚµãµÄÑÕ·ÖÇé¿ö´¦Àí.
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Õ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 				if (null != uNode && isRed(uNode)) 
 				{
-					// 1 ÊåÊå½ÚµãÊ±ºìÉ«.
+					// 1 ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½É«.
 					setBlack(uNode);
 					setBlack(pNode);
 					setRed(gNode);
@@ -539,7 +539,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 				} 
 				else 
 				{
-					// 2 ÊåÊå½ÚµãÊ±ºÚÉ«£¬ÇÒµ±Ç°½ÚµãÊÇ×óº¢×Ó.
+					// 2 ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½É«ï¿½ï¿½ï¿½Òµï¿½Ç°ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 					if (pNode.getLeftChild() == node) 
 					{
 						rightRotate(pNode);
@@ -548,7 +548,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 						node = tmp;
 					}
 					
-					// 3 ÊåÊå½ÚµãÊ±ºÚÉ«£¬ÇÒµ±Ç°½ÚµãÊÇÓÒº¢×Ó.
+					// 3 ï¿½ï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½É«ï¿½ï¿½ï¿½Òµï¿½Ç°ï¿½Úµï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½.
 					setBlack(pNode);
 					setRed(gNode);
 					leftRotate(gNode);
@@ -558,46 +558,46 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 			pNode = parentNodeOf(node);
 		} 
 		
-		// ½«¸ù½ÚµãÉèÖÃÎªºÚÉ«.
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«.
 		setBlack(root);
 	}
 	
 	/**
 	 * 
 	* @Title: removeFix 
-	* @Description: ºìºÚÊ÷É¾³ýÐÞÕýº¯Êý£¬ÔÚÏòºìºÚÊ÷É¾³ý½ÚµãÖ®ºó£¬½«ÆäÖØÐÂ¹¹Ôì³ÉÒ»¿ÃºìºÚÊ÷.
+	* @Description: ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Úµï¿½Ö®ï¿½ó£¬½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ãºï¿½ï¿½ï¿½ï¿½.
 	* @param @param cNode
-	* @param @param pNode Éè¶¨ÎÄ¼þ. 
-	* @return void ·µ»ØÀàÐÍ .
+	* @param @param pNode ï¿½è¶¨ï¿½Ä¼ï¿½. 
+	* @return void ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .
 	* @throws 
-	* 		Òì³£.
+	* 		ï¿½ì³£.
 	 */
 	private void removeFix(RBTNode<T> cNode, RBTNode<T> pNode) 
 	{
-		// cNodeµÄÐÖµÜ½Úµã.
+		// cNodeï¿½ï¿½ï¿½ÖµÜ½Úµï¿½.
 		RBTNode<T> bNode = null;
 		
-		// µ±cNodeÎªºÚ½ÚµãÇÒ²»Îª¸ù½ÚµãÊ±£¬ÒâÎ¶×ÅpNode°üº¬cNodeµÄ×ÓÊ÷µ½Æä×ÓËï½ÚµãÎ¥±³ºìºÚÊ÷ÐÔÖÊ5.
+		// ï¿½ï¿½cNodeÎªï¿½Ú½Úµï¿½ï¿½Ò²ï¿½Îªï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½ï¿½ï¿½Î¶ï¿½ï¿½pNodeï¿½ï¿½ï¿½ï¿½cNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Î¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5.
 		while ((null == cNode || isBlack(cNode)) && (cNode != root)) 
 		{
 			if (pNode.getLeftChild() == cNode) 
 			{
-				// cNodeÎª×óº¢×Ó£¬ÆäÐÖµÜ½ÚµãÎªÓÒº¢×Ó.
+				// cNodeÎªï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Îªï¿½Òºï¿½ï¿½ï¿½.
 				bNode = pNode.getRightChild();
 				
-				// 1 cNodeµÄÐÖµÜ½ÚµãÊ±ºìÉ«µÄ.
+				// 1 cNodeï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Ê±ï¿½ï¿½É«ï¿½ï¿½.
 				if (isRed(bNode)) 
 				{
-					// cNodeµÄ¸¸½ÚµãºÍbNodeµÄ×Ó½Úµã¶¼ÊÇºÚ½Úµã.
+					// cNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½bNodeï¿½ï¿½ï¿½Ó½Úµã¶¼ï¿½ÇºÚ½Úµï¿½.
 					setBlack(bNode);
 					setRed(pNode);
-					// ¶ÔpNode½øÐÐ×óÐý.
+					// ï¿½ï¿½pNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 					leftRotate(pNode);
-					// bNodeÎªºÚ½ÚµãÁË.
+					// bNodeÎªï¿½Ú½Úµï¿½ï¿½ï¿½.
 					bNode = pNode.getRightChild();
 				}
 				
-				// 2 cNodeµÄÐÖµÜ½ÚµãÃ»ºìº¢×Ó½Úµã.
+				// 2 cNodeï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Ã»ï¿½ìº¢ï¿½Ó½Úµï¿½.
 				if ((null == bNode.getLeftChild() || isBlack(bNode.getLeftChild())) && 
 						(null == bNode.getRightChild() || isBlack(bNode.getRightChild()))) 
 				{
@@ -609,11 +609,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 				{
 					if (null == bNode.getRightChild() || isBlack(bNode.getRightChild())) 
 					{
-						// 3 cNodeµÄÐÖµÜ½ÚµãÊ±ºÚÉ«µÄ£¬²¢ÇÒ×óº¢×ÓÊÇºì£¬ÓÒº¢×ÓÊÇºÚ.
+						// 3 cNodeï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Ê±ï¿½ï¿½É«ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çºì£¬ï¿½Òºï¿½ï¿½ï¿½ï¿½Çºï¿½.
 						setBlack(bNode.getLeftChild());
 						setRed(bNode);
 						rightRotate(bNode);
-						// bNodeÎªºÚ½ÚµãÁË,ÆäÓÒº¢×ÓÎªºì£¬×óº¢×ÓÑÕÉ«Î´Öª.
+						// bNodeÎªï¿½Ú½Úµï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½Îªï¿½ì£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«Î´Öª.
 						bNode = pNode.getRightChild();
 					}
 					setColor(bNode, colorOf(pNode));
@@ -626,22 +626,22 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 			} 
 			else 
 			{
-				// cNodeÎªÓÒº¢×Ó,ÆäÐÖµÜ½ÚµãÎª×óº¢×Ó.
+				// cNodeÎªï¿½Òºï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Îªï¿½ï¿½ï¿½ï¿½.
 				bNode = pNode.getLeftChild();
 				
-				// cNodeµÄÐÖµÜ½ÚµãÊ±ºìÉ«µÄ.
+				// cNodeï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Ê±ï¿½ï¿½É«ï¿½ï¿½.
 				if (isRed(bNode)) 
 				{
-					// cNodeµÄ¸¸½ÚµãºÍbNodeµÄ×Ó½Úµã¶¼ÊÇºÚ½Úµã.
+					// cNodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½bNodeï¿½ï¿½ï¿½Ó½Úµã¶¼ï¿½ÇºÚ½Úµï¿½.
 					setBlack(bNode);
 					setRed(pNode);
-					// ¶ÔpNode½øÐÐÓÒÐý.
+					// ï¿½ï¿½pNodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 					rightRotate(pNode);
-					// bNodeÎªºÚ½ÚµãÁË.
+					// bNodeÎªï¿½Ú½Úµï¿½ï¿½ï¿½.
 					bNode = pNode.getLeftChild();
 				}
 				
-				// cNodeµÄÐÖµÜ½ÚµãÃ»ºìº¢×Ó½Úµã.
+				// cNodeï¿½ï¿½ï¿½ÖµÜ½Úµï¿½Ã»ï¿½ìº¢ï¿½Ó½Úµï¿½.
 				if ((null == bNode.getLeftChild() || isBlack(bNode.getLeftChild())) && 
 						(null == bNode.getRightChild() || isBlack(bNode.getRightChild()))) 
 				{
@@ -670,7 +670,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 			
 		}
 		
-		// µ±cNodeÎªºì½ÚµãÊ±£¬ÓÉÓÚÉ¾ÁËÒ»¸öºÚ½Úµã£¬½«ÆäÉèÖÃÎªºÚ½Úµã¼´¿É;µ±cNodeÎª¸ù½ÚµãÊ±£¬Ö±½ÓÉèÖÃÎªºÚ½Úµã.
+		// ï¿½ï¿½cNodeÎªï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ú½Úµã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ú½Úµã¼´ï¿½ï¿½;ï¿½ï¿½cNodeÎªï¿½ï¿½ï¿½Úµï¿½Ê±ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ú½Úµï¿½.
 		if (null != cNode) 
 		{
 			setBlack(cNode);
@@ -688,7 +688,7 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		RBTNode<T> yNode = null;
 		RBTNode<T> xNode = root;
 		
-		// 1 ½«ºìºÚÊ÷µ±×÷Ò»¿Å¶þ²æ²éÕÒÊ÷£¬½«½ÚµãÌí¼Óµ½¶þ²æÊ÷ÖÐ.
+		// 1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 		while (null != xNode) 
 		{
 			yNode = xNode;
@@ -722,10 +722,10 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		}
 		
 		
-		// 2 ÉèÖÃ½ÚµãµÄÑÕÉ«ÎªºìÉ«.
+		// 2 ï¿½ï¿½ï¿½Ã½Úµï¿½ï¿½ï¿½ï¿½É«Îªï¿½ï¿½É«.
 		node.setColor(RBTConstant.RED);
 		
-		// 3 ½«ËüÖØÐÂÐÞÕýÎªÒ»¿ÅºìºÚÊ÷.
+		// 3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÒ»ï¿½Åºï¿½ï¿½ï¿½ï¿½.
 		insertFix(node);
 	}
 
@@ -768,35 +768,35 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		RBTNode<T> pNode = null;
 		boolean color = false;
 		
-		// 1 ²éÑ¯´ýÉ¾Êý¾ÝÏî.
+		// 1 ï¿½ï¿½Ñ¯ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 		RBTNode<T> node = find(data);
 		
-		// 2 ²éÑ¯´ýÉ¾Êý¾ÝÏîÊÇ·ñ´æÔÚ.
+		// 2 ï¿½ï¿½Ñ¯ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½.
 		if (null == node) 
 		{
 			return false;
 		}
 		
-		// 3 ¸ù¾Ý´ýÉ¾½ÚµãµÄº¢×ÓÇé¿ö½øÐÐ´¦Àí.
+		// 3 ï¿½ï¿½ï¿½Ý´ï¿½É¾ï¿½Úµï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½.
 		if (null != node.getLeftChild() && null != node.getRightChild()) 
 		{
-			// ´òÓ¡²åÈë½ÚµãµÄÇ°ÇýºÍºó¼Ì½Úµã.
+			// ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½Ç°ï¿½ï¿½ï¿½Íºï¿½Ì½Úµï¿½.
 			LOGGER.info(getSuccessor(node));;
 			LOGGER.info(getPredecessor(node));
 			
-			// µ±´ýÉ¾³ýµÄ½ÚµãÓÐÁ½¸öº¢×Ó½ÚµãÊ±.
+			// ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½Úµï¿½Ê±.
 			RBTNode<T> successor = node.getRightChild();
 			
-			// ²éÕÒºó¼Ì½Úµã.
+			// ï¿½ï¿½ï¿½Òºï¿½Ì½Úµï¿½.
 			while (null != successor.getLeftChild()) 
 			{
 				successor = successor.getLeftChild();
 			}
 			
-			// node½Úµã²»ÊÇ¸ù½Úµã.
+			// nodeï¿½Úµã²»ï¿½Ç¸ï¿½ï¿½Úµï¿½.
 			if (null != parentNodeOf(node)) 
 			{
-				// ½«nodeµÄ¸¸½ÚµãÓënodeµÄºó¼Ì½Úµã½¨Á¢¸¸×Ó¹ØÏµ.
+				// ï¿½ï¿½nodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½nodeï¿½Äºï¿½Ì½Úµã½¨ï¿½ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½Ïµ.
 				if (node == parentNodeOf(node).getLeftChild()) 
 				{
 					parentNodeOf(node).setLeftChild(successor);
@@ -811,26 +811,26 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 				root = successor;
 			}
 			
-			// ºó¼Ì½ÚµãµÄÓÒº¢×ÓÐèÒªµ÷Õû.
+			// ï¿½ï¿½Ì½Úµï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½.
 			cNode = successor.getRightChild();
 			pNode = parentNodeOf(successor);
 			color = colorOf(successor);
 			
-			// ±»É¾³ýµÄ½ÚµãÊ±ËüµÄºó¼Ì½ÚµãµÄ¸¸½Úµã.
+			// ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä½Úµï¿½Ê±ï¿½ï¿½ï¿½Äºï¿½Ì½Úµï¿½Ä¸ï¿½ï¿½Úµï¿½.
 			if (pNode == node) 
 			{
 				pNode = successor;
 			} 
 			else 
 			{
-				// ºó¼Ì½ÚµãµÄÓÒº¢×ÓºÍºó¼Ì½ÚµãµÄ¸¸½Úµã½¨Á¢¸¸×Ó¹ØÏµ.
+				// ï¿½ï¿½Ì½Úµï¿½ï¿½ï¿½Òºï¿½ï¿½ÓºÍºï¿½Ì½Úµï¿½Ä¸ï¿½ï¿½Úµã½¨ï¿½ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½Ïµ.
 				if (null != cNode) 
 				{
 					setParentNode(cNode, pNode);
 				}
 				pNode.setLeftChild(cNode);
 				
-				// ºó¼Ì½ÚµãºÍnodeµÄÓÒº¢×Ó½¨Á¢¸¸×Ó¹ØÏµ.
+				// ï¿½ï¿½Ì½Úµï¿½ï¿½nodeï¿½ï¿½ï¿½Òºï¿½ï¿½Ó½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½Ïµ.
 				successor.setRightChild(node.getRightChild());
 				setParentNode(node.getRightChild(), successor);
 			}
@@ -844,11 +844,11 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 		} 
 		else 
 		{
-			// µ±´ýÉ¾³ýµÄ½ÚµãÊÇÒ¶½Úµã»òÆäº¢×Ó½ÚµãÖ»ÓÐÒ»¸öÊ±£¬Ö±½ÓÉ¾³ý£¬²¢½«Æäº¢×Ó½ÚµãºÍ¸¸½Úµã½¨Á¢¹ØÏµ£¬ºó¸ù¾ÝÆäÑÕÉ«ÐÞÕýÆ½ºâ.
+			// ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä½Úµï¿½ï¿½ï¿½Ò¶ï¿½Úµï¿½ï¿½ï¿½äº¢ï¿½Ó½Úµï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½Ö±ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½äº¢ï¿½Ó½Úµï¿½Í¸ï¿½ï¿½Úµã½¨ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½.
 			pNode = node.getParentNode();
 			color = node.getColor();
 			
-			// ²éÕÒÆäº¢×Ó.
+			// ï¿½ï¿½ï¿½ï¿½ï¿½äº¢ï¿½ï¿½.
 			if (null != node.getLeftChild()) 
 			{
 				cNode = node.getLeftChild();
@@ -858,16 +858,16 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 				cNode = node.getRightChild();
 			}
 			
-			// ×óº¢×Ó»òÓÒº¢×Ó²»Îª¿ÕÊ±£¬½«ËüµÄ¸¸½ÚµãÉèÖÃÎªº¢×ÓµÄ¸¸½Úµã.
+			// ï¿½ï¿½ï¿½Ó»ï¿½ï¿½Òºï¿½ï¿½Ó²ï¿½Îªï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ÓµÄ¸ï¿½ï¿½Úµï¿½.
 			if (null != cNode) 
 			{
 				cNode.setParentNode(pNode);
 			}
 			
-			// node²»ÊÇ¸ù½Úµã£¬½«Æä¸¸½ÚµãÖ¸ÏòËüµÄÁªÏµÖ¸ÏòÆäº¢×Ó½Úµã.
+			// nodeï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Úµã£¬ï¿½ï¿½ï¿½ä¸¸ï¿½Úµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÖ¸ï¿½ï¿½ï¿½äº¢ï¿½Ó½Úµï¿½.
 			if (null != pNode) 
 			{
-				// nodeÊÇ×óº¢×Ó£¬Ôò½«nodeµÄ¸¸½ÚµãµÄ×óº¢×ÓÉèÖÃÎªnodeµÄº¢×Ó.
+				// nodeï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½nodeï¿½Ä¸ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªnodeï¿½Äºï¿½ï¿½ï¿½.
 				if (pNode.getLeftChild() == node) 
 				{
 					pNode.setLeftChild(cNode);
@@ -883,10 +883,10 @@ public class RBTree<T extends CompareIntf<T>> implements Tree<T>
 			}
 		}
 		
-		// µ±´ýÉ¾³ýµÄnode½Úµã»òÒÆ³ýµÄºó¼Ì½ÚµãÊÇºÚÉ«½Úµã£¬ÔòÐèÒªÐÞÕýÆ½ºâ.
+		// ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½nodeï¿½Úµï¿½ï¿½ï¿½Æ³ï¿½ï¿½Äºï¿½Ì½Úµï¿½ï¿½Çºï¿½É«ï¿½Úµã£¬ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½.
 		if (color == RBTConstant.BLACK) 
 		{
-			// µ±nodeË«×Ó·Ç¿ÕÊ±£¬cNodeÎª×óº¢×Ó£¬·ñÔòcNode¿ÉÄÜÎª×óº¢×ÓÒ²¿ÉÄÜÎªÓÒº¢×Ó.
+			// ï¿½ï¿½nodeË«ï¿½Ó·Ç¿ï¿½Ê±ï¿½ï¿½cNodeÎªï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½cNodeï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Îªï¿½Òºï¿½ï¿½ï¿½.
 			removeFix(cNode, pNode);
 		}
 		

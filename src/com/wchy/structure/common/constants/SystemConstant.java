@@ -5,18 +5,18 @@ package com.wchy.structure.common.constants;
 * @ClassName SystemConstant.java
 * @Description 
 * <p>
-* ÏµÍ³³£Á¿Àà.
+* ç³»ç»Ÿå¸¸é‡ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ17ÈÕ ÏÂÎç3:18:11.
+* @Date 2017å¹´9æœˆ17æ—¥ ä¸‹åˆ3:18:11.
 *
  */
 public interface SystemConstant 

@@ -5,18 +5,18 @@ package com.wchy.structure.queue.intf;
 * @ClassName MyQueue.java
 * @Description 
 * <p>
-* ¶ÓÁĞ½Ó¿Ú.
+* é˜Ÿåˆ—æ¥å£.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç9:32:24.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ9:32:24.
 * 
 * @param <T>
  */
@@ -26,44 +26,44 @@ public interface MyQueue<T>
 	/**
 	 * 
 	* @Title: insert 
-	* @Description: Ïò¶ÓÁĞÖĞ²åÈëÊı¾İ.
-	* @param @param element Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: å‘é˜Ÿåˆ—ä¸­æ’å…¥æ•°æ®.
+	* @param @param element è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	void insert(T element);
 	
 	/**
 	 * 
 	* @Title: remove 
-	* @Description: ´Ó¶ÓÁĞÖĞµ¯³öÊı¾İ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return T ·µ»ØÀàĞÍ .
+	* @Description: ä»é˜Ÿåˆ—ä¸­å¼¹å‡ºæ•°æ®.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return T è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	T remove();
 	
 	/**
 	 * 
 	* @Title: peek 
-	* @Description: ²é¿´¶ÓÊ×Êı¾İ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return T ·µ»ØÀàĞÍ .
+	* @Description: æŸ¥çœ‹é˜Ÿé¦–æ•°æ®.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return T è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	T peek();
 	
 	/**
 	 * 
 	* @Title: isEmpty 
-	* @Description: ¶ÓÁĞ¿ÕÅĞ¶Ï.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return boolean ·µ»ØÀàĞÍ .
+	* @Description: é˜Ÿåˆ—ç©ºåˆ¤æ–­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return boolean è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	boolean isEmpty();
 	

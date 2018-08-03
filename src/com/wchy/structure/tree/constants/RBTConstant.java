@@ -5,30 +5,30 @@ package com.wchy.structure.tree.constants;
 * @ClassName RBTConstant.java
 * @Description 
 * <p>
-* Ê÷Êı¾İ½á¹¹³£Á¿Àà.
+* æ ‘æ•°æ®ç»“æ„å¸¸é‡ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ17ÈÕ ÏÂÎç3:20:06.
+* @Date 2017å¹´9æœˆ17æ—¥ ä¸‹åˆ3:20:06.
 *
  */
 public interface RBTConstant 
 {
 	
 	/**
-	 * ºì½Úµã±êÊ¶.
+	 * çº¢èŠ‚ç‚¹æ ‡è¯†.
 	 */
 	boolean RED = false;
 	
 	/**
-	 * ºÚ½Úµã±êÊ¶.
+	 * é»‘èŠ‚ç‚¹æ ‡è¯†.
 	 */
 	boolean BLACK = true;
 	

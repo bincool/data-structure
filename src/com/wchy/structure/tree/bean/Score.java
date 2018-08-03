@@ -7,18 +7,18 @@ import com.wchy.structure.common.utils.CompareIntf;
 * @ClassName Score.java
 * @Description 
 * <p>
-* ºìºÚÊ÷-²âÊÔbean.
+* çº¢é»‘æ ‘-æµ‹è¯•bean.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ23ÈÕ ÏÂÎç7:02:12.
+* @Date 2017å¹´9æœˆ23æ—¥ ä¸‹åˆ7:02:12.
 *
  */
 public class Score implements CompareIntf<Score> 
@@ -30,12 +30,12 @@ public class Score implements CompareIntf<Score>
 	private int id;
 	
 	/**
-	 * ĞÕÃû.
+	 * å§“å.
 	 */
 	private String name;
 	
 	/**
-	 * ·ÖÊı.
+	 * åˆ†æ•°.
 	 */
 	private int score;
 	
@@ -67,11 +67,11 @@ public class Score implements CompareIntf<Score>
 	/**
 	 * 
 	* @Title: getId 
-	* @Description: »ñÈ¡id.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: è·å–id.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public int getId() 
 	{
@@ -81,11 +81,11 @@ public class Score implements CompareIntf<Score>
 	/**
 	 * 
 	* @Title: setId 
-	* @Description: ÉèÖÃid.
-	* @param @param id Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®id.
+	* @param @param id è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setId(int id) 
 	{
@@ -95,11 +95,11 @@ public class Score implements CompareIntf<Score>
 	/**
 	 * 
 	* @Title: getName 
-	* @Description: »ñÈ¡ĞÕÃû.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–å§“å.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getName() 
 	{
@@ -109,11 +109,11 @@ public class Score implements CompareIntf<Score>
 	/**
 	 * 
 	* @Title: setName 
-	* @Description: ÉèÖÃĞÕÃû.
-	* @param @param name Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å§“å.
+	* @param @param name è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setName(String name) 
 	{
@@ -123,11 +123,11 @@ public class Score implements CompareIntf<Score>
 	/**
 	 * 
 	* @Title: getScore 
-	* @Description: »ñÈ¡·ÖÊı.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: è·å–åˆ†æ•°.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public int getScore() 
 	{
@@ -137,11 +137,11 @@ public class Score implements CompareIntf<Score>
 	/**
 	 * 
 	* @Title: setScore 
-	* @Description: ÉèÖÃ·ÖÊı.
-	* @param @param score Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®åˆ†æ•°.
+	* @param @param score è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setScore(int score) 
 	{

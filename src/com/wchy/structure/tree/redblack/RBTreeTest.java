@@ -11,30 +11,30 @@ import com.wchy.structure.tree.bean.Score;
 * @ClassName RBTreeTest.java
 * @Description 
 * <p>
-* ºìºÚÊ÷-²âÊÔÀà.
+* çº¢é»‘æ ‘-æµ‹è¯•ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ20ÈÕ ÉÏÎç12:39:55.
+* @Date 2017å¹´9æœˆ20æ—¥ ä¸Šåˆ12:39:55.
 *
  */
 public class RBTreeTest 
 {
 	
 	/**
-	 * ºìºÚÊ÷¶ÔÏó.
+	 * çº¢é»‘æ ‘å¯¹è±¡.
 	 */
 	private RBTree<Score> rbTree;
 	
 	/**
-	 * ·ÖÊı.
+	 * åˆ†æ•°.
 	 */
 	private int[] score = new int[10];
 

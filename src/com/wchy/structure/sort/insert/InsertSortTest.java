@@ -9,18 +9,18 @@ import com.wchy.structure.sort.base.SortTest;
 * @ClassName InsertSortTest.java
 * @Description 
 * <p>
-* Êı×Ö£º²åÈëÅÅĞò²âÊÔÀà.
+* æ•°å­—ï¼šæ’å…¥æ’åºæµ‹è¯•ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:42:52.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:42:52.
 *
  */
 public class InsertSortTest extends SortTest<Integer>

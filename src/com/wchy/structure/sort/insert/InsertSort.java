@@ -7,18 +7,18 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName InsertSort.java
 * @Description 
 * <p>
-* Êı×Ö£º²åÈëÅÅĞò.
+* æ•°å­—ï¼šæ’å…¥æ’åº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:42:23.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:42:23.
 * 
 * @param <T>
  */
@@ -48,7 +48,7 @@ public class InsertSort<T extends Number> extends NumberSort<T>
 			Number current = arr[i];
 			while (j > 0 && compare(arr[j - 1], current)) 
 			{
-				// ÒÆ¶¯Î»ÖÃ£¬²»ÄÜĞ´³Éarr[j--] = arr[j - 1]£¬·ñÔòarr[2] = arr[1-1]
+				// ç§»åŠ¨ä½ç½®ï¼Œä¸èƒ½å†™æˆarr[j--] = arr[j - 1]ï¼Œå¦åˆ™arr[2] = arr[1-1]
 				// arr[j] = arr[j - 1];
 				// --j;
 				arr[j--] = arr[j];

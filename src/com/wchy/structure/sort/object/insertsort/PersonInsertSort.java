@@ -10,18 +10,18 @@ import com.wchy.structure.sort.object.bean.Person;
 * @ClassName PersonInsertSort.java
 * @Description 
 * <p>
-* ÈË£º²åÈëÅÅĞò.
+* ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:59:21.
+* @Date 2017ï¿½ï¿½8ï¿½ï¿½26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½7:59:21.
 * 
 * @param <T>
  */
@@ -29,7 +29,7 @@ public class PersonInsertSort<T extends Person> extends PersonSort<T>
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private final static Logger LOGGER = Logger.getLogger(PersonSort.class);
 
@@ -58,7 +58,7 @@ public class PersonInsertSort<T extends Person> extends PersonSort<T>
 			Person current = arr[i];
 			while (j > 0 && compare(arr[j - 1], current)) 
 			{
-				// ÒÆ¶¯Î»ÖÃ£¬²»ÄÜĞ´³Éarr[j--] = arr[j - 1]£¬·ñÔòarr[2] = arr[1-1]
+				// ï¿½Æ¶ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½arr[j--] = arr[j - 1]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½arr[2] = arr[1-1]
 				// arr[j] = arr[j - 1];
 				// --j;
 				arr[j--] = arr[j];

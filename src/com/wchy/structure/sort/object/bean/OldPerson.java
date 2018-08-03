@@ -5,25 +5,25 @@ package com.wchy.structure.sort.object.bean;
 * @ClassName OldPerson.java
 * @Description 
 * <p>
-* ÀÏÈË.
+* è€äºº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºÀÏÈË£¬¼Ì³ĞÓÚperson£¬¶àÁËÍËĞİ½ğ.
+* è¯¦ç»†æè¿°ï¼šè€äººï¼Œç»§æ‰¿äºpersonï¼Œå¤šäº†é€€ä¼‘é‡‘.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:49:46.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:49:46.
 *
  */
 public class OldPerson extends Person 
 {
 	
 	/**
-	 * ÍËĞİ½ğ.
+	 * é€€ä¼‘é‡‘.
 	 */
 	private String pension;
 	
@@ -40,11 +40,11 @@ public class OldPerson extends Person
 	/**
 	 * 
 	* @Title: getPension 
-	* @Description: »ñÈ¡ÍËĞİ½ğ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–é€€ä¼‘é‡‘.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getPension() 
 	{
@@ -54,11 +54,11 @@ public class OldPerson extends Person
 	/**
 	 * 
 	* @Title: setPension 
-	* @Description: ÉèÖÃÍËĞİ½ğ.
-	* @param @param pension Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®é€€ä¼‘é‡‘.
+	* @param @param pension è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setPension(String pension) 
 	{

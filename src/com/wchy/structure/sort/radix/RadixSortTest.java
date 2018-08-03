@@ -9,25 +9,25 @@ import com.wchy.structure.sort.base.SortTest;
 * @ClassName RadixSortTest.java
 * @Description 
 * <p>
-* »ùÊıÅÅĞò²âÊÔÀà.
+* åŸºæ•°æ’åºæµ‹è¯•ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç2:29:02.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ2:29:02.
 *
  */
 public class RadixSortTest extends SortTest<Integer> 
 {
 	
 	/**
-	 * d±íÊ¾Î»Êı£º1,2,3...
+	 * dè¡¨ç¤ºä½æ•°ï¼š1,2,3...
 	 */
 	private static int d = 2;
 

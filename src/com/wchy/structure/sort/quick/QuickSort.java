@@ -7,18 +7,18 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName QuickSort.java
 * @Description 
 * <p>
-* Êı×Ö£º¿ìËÙÅÅĞò.
+* æ•°å­—ï¼šå¿«é€Ÿæ’åº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ23ÈÕ ÏÂÎç11:08:40.
+* @Date 2017å¹´8æœˆ23æ—¥ ä¸‹åˆ11:08:40.
 * 
 * @param <T>
  */
@@ -44,12 +44,12 @@ public class QuickSort<T extends Number> extends NumberSort<T>
 	/**
 	 * 
 	* @Title: quickSort 
-	* @Description: ¿ìËÙÅÅĞò.
+	* @Description: å¿«é€Ÿæ’åº.
 	* @param @param left
-	* @param @param right Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @param @param right è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	private void quickSort(int left, int right) 
 	{
@@ -69,14 +69,14 @@ public class QuickSort<T extends Number> extends NumberSort<T>
 	/**
 	 * 
 	* @Title: partitionIt 
-	* @Description: »®·ÖËã·¨.
+	* @Description: åˆ’åˆ†ç®—æ³•.
 	* @param @param left
 	* @param @param right
 	* @param @param pivot
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	private int partitionIt(int left, int right, Number pivot) 
 	{

@@ -8,18 +8,18 @@ import com.wchy.structure.tree.bean.HuffmanNode;
 * @ClassName PriorityQueue.java
 * @Description 
 * <p>
-* ÓÅÏÈ¼¶¶ÓÁĞ.
+* ä¼˜å…ˆçº§é˜Ÿåˆ—.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºÈ¨Öµ´ÓĞ¡µ½´óµÄÓÅÏÈ¼¶¶ÓÁĞ.
+* è¯¦ç»†æè¿°ï¼šæƒå€¼ä»å°åˆ°å¤§çš„ä¼˜å…ˆçº§é˜Ÿåˆ—.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ3ÈÕ ÏÂÎç8:36:25.
+* @Date 2017å¹´9æœˆ3æ—¥ ä¸‹åˆ8:36:25.
 * 
 * @param <T>
  */
@@ -27,17 +27,17 @@ public class PriorityQueue<T extends HuffmanNode> implements MyQueue<T>
 {
 	
 	/**
-	 * ¶ÓÁĞÈİÁ¿.
+	 * é˜Ÿåˆ—å®¹é‡.
 	 */
 	private int capacity;
 	
 	/**
-	 * ´æ·Å¶ÓÁĞµÄÊı×é.
+	 * å­˜æ”¾é˜Ÿåˆ—çš„æ•°ç»„.
 	 */
 	private HuffmanNode[] queueArr;
 	
 	/**
-	 * ¶ÓÁĞÖĞÔªËØ¸öÊı.
+	 * é˜Ÿåˆ—ä¸­å…ƒç´ ä¸ªæ•°.
 	 */
 	private int size;
 	
@@ -102,13 +102,13 @@ public class PriorityQueue<T extends HuffmanNode> implements MyQueue<T>
 	/**
 	 * 
 	* @Title: compare 
-	* @Description: ¹ş·òÂü½Úµã±È½Ï.
+	* @Description: å“ˆå¤«æ›¼èŠ‚ç‚¹æ¯”è¾ƒ.
 	* @param @param a
 	* @param @param b
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return boolean ·µ»ØÀàĞÍ .
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return boolean è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	private boolean compare(HuffmanNode a, HuffmanNode b) 
 	{

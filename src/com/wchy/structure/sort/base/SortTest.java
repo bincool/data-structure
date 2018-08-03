@@ -11,28 +11,28 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName SortTest.java
 * @Description 
 * <p>
-* Êı×ÖÅÅĞò²âÊÔ-³éÏóÀà.
+* æ•°å­—æ’åºæµ‹è¯•-æŠ½è±¡ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ23ÈÕ ÏÂÎç11:50:21.
+* @Date 2017å¹´8æœˆ23æ—¥ ä¸‹åˆ11:50:21.
 * 
 * @param <T>
  */
 public abstract class SortTest<T extends Number> 
 {
 	
-	// Êı×ÖÅÅĞò½Ó¿Ú.
+	// æ•°å­—æ’åºæ¥å£.
 	protected NumberSort<T> sortApp;
 	
-	// ´ıÅÅĞòµÄÊı×éÄ¬ÈÏ´óĞ¡.
+	// å¾…æ’åºçš„æ•°ç»„é»˜è®¤å¤§å°.
 	protected static int defalutSize = 20;
 
 	@Before

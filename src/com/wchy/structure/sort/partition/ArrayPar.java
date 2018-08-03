@@ -8,18 +8,18 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName ArrayPar.java
 * @Description 
 * <p>
-* Êı×Ö£º»®·ÖËã·¨.
+* æ•°å­—ï¼šåˆ’åˆ†ç®—æ³•.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ23ÈÕ ÏÂÎç5:26:25.
+* @Date 2017å¹´8æœˆ23æ—¥ ä¸‹åˆ5:26:25.
 * 
 * @param <T>
  */
@@ -27,7 +27,7 @@ public class ArrayPar<T extends Number> extends NumberSort<T>
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private final static Logger LOGGER = Logger.getLogger(ArrayPar.class);
 	
@@ -55,14 +55,14 @@ public class ArrayPar<T extends Number> extends NumberSort<T>
 	/**
 	 * 
 	* @Title: partitionIt 
-	* @Description: »®·ÖËã·¨.
+	* @Description: åˆ’åˆ†ç®—æ³•.
 	* @param @param left
 	* @param @param right
 	* @param @param pivot
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	private int partitionIt(int left, int right, Number pivot) 
 	{

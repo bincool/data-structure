@@ -5,18 +5,18 @@ package com.wchy.structure.tree.bean;
 * @ClassName TreeNode.java
 * @Description 
 * <p>
-* ¶ş²æÊ÷-½Úµãbean.
+* äºŒå‰æ ‘-èŠ‚ç‚¹bean.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç7:51:01.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ7:51:01.
 * 
 * @param <T>
  */
@@ -24,28 +24,28 @@ public class TreeNode<T>
 {
 	
 	/**
-	 * ½ÚµãÊı¾İÏî.
+	 * èŠ‚ç‚¹æ•°æ®é¡¹.
 	 */
 	private T data;
 	
 	/**
-	 * ×óº¢×Ó½Úµã.
+	 * å·¦å­©å­èŠ‚ç‚¹.
 	 */
 	private TreeNode<T> leftChild;
 	
 	/**
-	 * ÓÒº¢×Ó½Úµã.
+	 * å³å­©å­èŠ‚ç‚¹.
 	 */
 	private TreeNode<T> rightChild;
 
 	/**
 	 * 
 	* @Title: getData 
-	* @Description: »ñÈ¡½ÚµãÊı¾İ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return T ·µ»ØÀàĞÍ .
+	* @Description: è·å–èŠ‚ç‚¹æ•°æ®.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return T è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public T getData() 
 	{
@@ -55,11 +55,11 @@ public class TreeNode<T>
 	/**
 	 * 
 	* @Title: setData 
-	* @Description: ÉèÖÃ½ÚµãÊı¾İ.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®èŠ‚ç‚¹æ•°æ®.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setData(T data) 
 	{
@@ -69,11 +69,11 @@ public class TreeNode<T>
 	/**
 	 * 
 	* @Title: getLeftChild 
-	* @Description: »ñÈ¡×óº¢×Ó½Úµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return TreeNode<T> ·µ»ØÀàĞÍ .
+	* @Description: è·å–å·¦å­©å­èŠ‚ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return TreeNode<T> è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public TreeNode<T> getLeftChild() 
 	{
@@ -83,11 +83,11 @@ public class TreeNode<T>
 	/**
 	 * 
 	* @Title: setLeftChild 
-	* @Description: ÉèÖÃ×óº¢×Ó½Úµã.
-	* @param @param leftChild Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å·¦å­©å­èŠ‚ç‚¹.
+	* @param @param leftChild è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setLeftChild(TreeNode<T> leftChild) 
 	{
@@ -97,11 +97,11 @@ public class TreeNode<T>
 	/**
 	 * 
 	* @Title: getRightChild 
-	* @Description: »ñÈ¡ÓÒº¢×Ó½Úµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return TreeNode<T> ·µ»ØÀàĞÍ .
+	* @Description: è·å–å³å­©å­èŠ‚ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return TreeNode<T> è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public TreeNode<T> getRightChild() 
 	{
@@ -111,11 +111,11 @@ public class TreeNode<T>
 	/**
 	 * 
 	* @Title: setRightChild 
-	* @Description: ÉèÖÃÓÒº¢×Ó½Úµã.
-	* @param @param rightChild Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å³å­©å­èŠ‚ç‚¹.
+	* @param @param rightChild è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setRightChild(TreeNode<T> rightChild) 
 	{

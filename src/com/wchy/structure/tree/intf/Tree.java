@@ -5,18 +5,18 @@ package com.wchy.structure.tree.intf;
 * @ClassName Tree.java
 * @Description 
 * <p>
-* ¶ş²æÊ÷½Ó¿ÚÀà.
+* äºŒå‰æ ‘æ¥å£ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç7:53:46.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ7:53:46.
 * 
 * @param <T>
  */
@@ -26,67 +26,67 @@ public interface Tree<T>
 	/**
 	 * 
 	* @Title: insert 
-	* @Description: ĞÂÔö½ÚµãÊı¾İ.
-	* @param @param data Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: æ–°å¢èŠ‚ç‚¹æ•°æ®.
+	* @param @param data è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	void insert(T data);
 	
 	/**
 	 * 
 	* @Title: find 
-	* @Description: °´¹Ø¼ü×Ö²éÕÒ½Úµã.
+	* @Description: æŒ‰å…³é”®å­—æŸ¥æ‰¾èŠ‚ç‚¹.
 	* @param @param key
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return Object ·µ»ØÀàĞÍ .
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return Object è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	Object find(T data);
 	
 	/**
 	 * 
 	* @Title: delete 
-	* @Description: °´¹Ø¼ü×ÖÉ¾³ı½Úµã.
-	* @param @param key Éè¶¨ÎÄ¼ş. 
-	* @return boolean ·µ»ØÀàĞÍ .
+	* @Description: æŒ‰å…³é”®å­—åˆ é™¤èŠ‚ç‚¹.
+	* @param @param key è®¾å®šæ–‡ä»¶. 
+	* @return boolean è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	boolean delete(T data);
 	
 	/**
 	 * 
 	* @Title: order 
-	* @Description: ±éÀú¶ş²æÊ÷.
-	* @param @param methodType Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: éå†äºŒå‰æ ‘.
+	* @param @param methodType è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	void order(String methodType);
 	
 	/**
 	 * 
 	* @Title: minimum 
-	* @Description: ²éÕÒ×îĞ¡¹Ø¼ü×ÖµÄ½Úµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return Object ·µ»ØÀàĞÍ .
+	* @Description: æŸ¥æ‰¾æœ€å°å…³é”®å­—çš„èŠ‚ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return Object è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	Object minimum();
 	
 	/**
 	 * 
 	* @Title: maximum 
-	* @Description: ²éÕÒ×î´ó¹Ø¼ü×ÖµÄ½Úµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return Object ·µ»ØÀàĞÍ .
+	* @Description: æŸ¥æ‰¾æœ€å¤§å…³é”®å­—çš„èŠ‚ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return Object è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	Object maximum();
 	

@@ -8,36 +8,36 @@ import com.wchy.structure.queue.intf.MyQueue;
 * @ClassName Queue.java
 * @Description 
 * <p>
-* ÀûÓÃË«¶ËÁ´±íÊµÏÖ¶ÓÁĞ.
+* åˆ©ç”¨åŒç«¯é“¾è¡¨å®ç°é˜Ÿåˆ—.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºÀûÓÃË«¶ËÁ´±íÊµÏÖ¶ÓÁĞ£¬.
+* è¯¦ç»†æè¿°ï¼šåˆ©ç”¨åŒç«¯é“¾è¡¨å®ç°é˜Ÿåˆ—ï¼Œ.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç12:49:21.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ12:49:21.
 *
  */
 public class Queue<T> implements MyQueue<T>
 {
 	
 	/**
-	 * Ë«¶ËÁ´±í,²»ÄÜĞ´³Éstatic£¬·ñÔòÊÇÍ¬Ò»¸ö¾²Ì¬ÄÚ´æ¿é.
+	 * åŒç«¯é“¾è¡¨,ä¸èƒ½å†™æˆstaticï¼Œå¦åˆ™æ˜¯åŒä¸€ä¸ªé™æ€å†…å­˜å—.
 	 */
 	private FirstLastLink<T> firstLastLink = new FirstLastLink<T>();
 	
 	/**
 	 * 
 	* @Title: display 
-	* @Description: ´òÓ¡¶ÓÁĞ.
-	* @param  Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: æ‰“å°é˜Ÿåˆ—.
+	* @param  è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void display() 
 	{
@@ -47,11 +47,11 @@ public class Queue<T> implements MyQueue<T>
 	/**
 	 * 
 	* @Title: pop 
-	* @Description: ´Ó¶ÓÁĞÀïµ¯³öÊı¾İ,µ÷ÓÃÇ°²»ĞèÒª½øĞĞ¿Õ¼ì²é.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return Integer ·µ»ØÀàĞÍ .
+	* @Description: ä»é˜Ÿåˆ—é‡Œå¼¹å‡ºæ•°æ®,è°ƒç”¨å‰ä¸éœ€è¦è¿›è¡Œç©ºæ£€æŸ¥.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return Integer è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public T removeByCheck() 
 	{

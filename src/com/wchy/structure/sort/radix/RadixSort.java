@@ -8,25 +8,25 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName RadixSort.java
 * @Description 
 * <p>
-* »ùÊıÅÅĞò.
+* åŸºæ•°æ’åº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºÓÃË«¶ËÁ´Ê½¶ÓÁĞ´æ·ÅÍ°Êı¾İ£¬»ùÊıÅÅĞò±È¿ìËÙÅÅĞò¶àÁË1±¶¿Õ¼ä.
+* è¯¦ç»†æè¿°ï¼šç”¨åŒç«¯é“¾å¼é˜Ÿåˆ—å­˜æ”¾æ¡¶æ•°æ®ï¼ŒåŸºæ•°æ’åºæ¯”å¿«é€Ÿæ’åºå¤šäº†1å€ç©ºé—´.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç2:28:00.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ2:28:00.
 *
  */
 public class RadixSort extends NumberSort<Integer> 
 {
 	
 	/**
-	 * 10¸öÍ°£¬·Ö±ğ·ÅÖÃÎ»ÉÏÎª0-9µÄÊı¾İ.
+	 * 10ä¸ªæ¡¶ï¼Œåˆ†åˆ«æ”¾ç½®ä½ä¸Šä¸º0-9çš„æ•°æ®.
 	 */
 	@SuppressWarnings("unchecked")
 	private static Queue<Integer>[] buckets = new Queue[] 
@@ -44,7 +44,7 @@ public class RadixSort extends NumberSort<Integer>
 			};
 	
 	/**
-	 * »ùÊıÅÅĞòµÄÊıµÄ×î´óÎ»Êı.
+	 * åŸºæ•°æ’åºçš„æ•°çš„æœ€å¤§ä½æ•°.
 	 */
 	private int d;
 	
@@ -53,7 +53,7 @@ public class RadixSort extends NumberSort<Integer>
 	* <p>Title: </p>
 	* <p>Description: </p>
 	* @param d
-	* 		×î´óÊıµÄÎ»Êı.
+	* 		æœ€å¤§æ•°çš„ä½æ•°.
 	 */
 	public RadixSort(int d) 
 	{
@@ -62,13 +62,13 @@ public class RadixSort extends NumberSort<Integer>
 	}
 
 	/**
-	 * ¹¹Ôì×Ó.
+	 * æ„é€ å­.
 	* <p>Title: </p>
 	* <p>Description: </p>
 	* @param initCapacity
-	* 		ÈİÁ¿.
+	* 		å®¹é‡.
 	* @param d
-	* 		×î´óÊıµÄÎ»Êı.
+	* 		æœ€å¤§æ•°çš„ä½æ•°.
 	 */
 	public RadixSort(int initCapacity, int d) 
 	{
@@ -79,12 +79,12 @@ public class RadixSort extends NumberSort<Integer>
 	@Override
 	public void sort() 
 	{
-		// ´ú±íÎ»Êı¶ÔÓ¦µÄÊı£º1,10,100...
+		// ä»£è¡¨ä½æ•°å¯¹åº”çš„æ•°ï¼š1,10,100...
 		int n = 1;
 		Number[] arr = getArr();
 		while (d-- > 0) 
 		{
-			// ½«Êı×éarrÀïµÄÃ¿¸öÊı×Ö·ÅÖÃµ½ÏàÓ¦µÄÍ°Àï.
+			// å°†æ•°ç»„arré‡Œçš„æ¯ä¸ªæ•°å­—æ”¾ç½®åˆ°ç›¸åº”çš„æ¡¶é‡Œ.
 			for (Number number : arr) 
 			{
 				int num = number.intValue();
@@ -92,7 +92,7 @@ public class RadixSort extends NumberSort<Integer>
 				buckets[digit].insert(num);
 			}
 			
-			// ½«Í°ÖĞµÄÊı¾İ¸´ÖÆ»ØÊı×éarr.
+			// å°†æ¡¶ä¸­çš„æ•°æ®å¤åˆ¶å›æ•°ç»„arr.
 			for (int i = 0, j = 0; j < 10; j++) 
 			{
 				while (!buckets[j].isEmpty()) 
@@ -101,7 +101,7 @@ public class RadixSort extends NumberSort<Integer>
 				}
 			}
 			
-			// ÒÆÎ».
+			// ç§»ä½.
 			n *= 10;
 		}
 	}

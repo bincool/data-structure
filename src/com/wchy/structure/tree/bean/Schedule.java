@@ -7,45 +7,45 @@ import com.wchy.structure.common.utils.TimeSn;
 * @ClassName Schedule.java
 * @Description 
 * <p>
-* ÈÕ³Ì±íbean.
+* æ—¥ç¨‹è¡¨bean.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç8:04:07.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ8:04:07.
 *
  */
 public class Schedule 
 {
 	
 	/**
-	 * ÈÕ³ÌID.
+	 * æ—¥ç¨‹ID.
 	 */
 	private long id;
 	
 	/**
-	 * ÈÕ³Ì±êÌâ.
+	 * æ—¥ç¨‹æ ‡é¢˜.
 	 */
 	private String title;
 	
 	/**
-	 * ÈÕ³ÌµØµã.
+	 * æ—¥ç¨‹åœ°ç‚¹.
 	 */
 	private String location;
 	
 	/**
-	 * ÈÕ³Ì¿ªÊ¼Ê±¼ä.
+	 * æ—¥ç¨‹å¼€å§‹æ—¶é—´.
 	 */
 	private String startDate;
 	
 	/**
-	 * ÈÕ³Ì½áÊøÊ±¼ä.
+	 * æ—¥ç¨‹ç»“æŸæ—¶é—´.
 	 */
 	private String endDate;
 	
@@ -65,11 +65,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: getId 
-	* @Description: »ñÈ¡ÈÕ³ÌID.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ—¥ç¨‹ID.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public long getId() 
 	{
@@ -79,11 +79,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: setId 
-	* @Description: ÉèÖÃÈÕ³ÌID.
-	* @param @param id Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ—¥ç¨‹ID.
+	* @param @param id è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setId(long id) 
 	{
@@ -93,11 +93,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: getTitle 
-	* @Description: »ñÈ¡ÈÕ³Ì±êÌâ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ—¥ç¨‹æ ‡é¢˜.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getTitle() 
 	{
@@ -107,11 +107,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: setTitle 
-	* @Description: ÉèÖÃÈÕ³Ì±êÌâ.
-	* @param @param title Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ—¥ç¨‹æ ‡é¢˜.
+	* @param @param title è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setTitle(String title) 
 	{
@@ -121,11 +121,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: getLocation 
-	* @Description: »ñÈ¡ÈÕ³ÌµØµã.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ—¥ç¨‹åœ°ç‚¹.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getLocation() 
 	{
@@ -135,11 +135,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: setLocation 
-	* @Description: ÉèÖÃÈÕ³ÌµØµã.
-	* @param @param location Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ—¥ç¨‹åœ°ç‚¹.
+	* @param @param location è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setLocation(String location) 
 	{
@@ -149,11 +149,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: getStartDate 
-	* @Description: »ñÈ¡ÈÕ³Ì¿ªÊ¼Ê±¼ä.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ—¥ç¨‹å¼€å§‹æ—¶é—´.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getStartDate() 
 	{
@@ -163,11 +163,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: setStartDate 
-	* @Description: ÉèÖÃÈÕ³Ì¿ªÊ¼Ê±¼ä.
-	* @param @param startDate Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ—¥ç¨‹å¼€å§‹æ—¶é—´.
+	* @param @param startDate è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setStartDate(String startDate) 
 	{
@@ -177,11 +177,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: getEndDate 
-	* @Description: »ñÈ¡ÈÕ³Ì½áÊøÊ±¼ä.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ—¥ç¨‹ç»“æŸæ—¶é—´.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getEndDate() 
 	{
@@ -191,11 +191,11 @@ public class Schedule
 	/**
 	 * 
 	* @Title: setEndDate 
-	* @Description: ÉèÖÃÈÕ³Ì½áÊøÊ±¼ä.
-	* @param @param endDate Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ—¥ç¨‹ç»“æŸæ—¶é—´.
+	* @param @param endDate è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setEndDate(String endDate) 
 	{

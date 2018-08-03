@@ -9,18 +9,18 @@ import com.wchy.structure.sort.object.bean.Person;
 * @ClassName PersonSort.java
 * @Description 
 * <p>
-* ¶ÔÏóÅÅĞò-³éÏóÀà.
+* å¯¹è±¡æ’åº-æŠ½è±¡ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£º¶Ôperson¶ÔÏó¼°Æä×ÓÀà½øĞĞÅÅĞò£¬°´name½øĞĞÅÅĞò.
+* è¯¦ç»†æè¿°ï¼šå¯¹personå¯¹è±¡åŠå…¶å­ç±»è¿›è¡Œæ’åºï¼ŒæŒ‰nameè¿›è¡Œæ’åº.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:48:41.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:48:41.
 * 
 * @param <T>
  */
@@ -28,17 +28,17 @@ public abstract class PersonSort<T extends Person> extends Sort<Person>
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private final static Logger LOGGER = Logger.getLogger(PersonSort.class);
 	
 	/**
-	 * Êı×é.
+	 * æ•°ç»„.
 	 */
 	private Person[] arr;
 	
 	/**
-	 * ¹¹Ôìº¯Êı.
+	 * æ„é€ å‡½æ•°.
 	 * @param initCapacity
 	 */
 	public PersonSort(int initCapacity) 
@@ -53,7 +53,7 @@ public abstract class PersonSort<T extends Person> extends Sort<Person>
 	}
 	
 	/**
-	 * ´ı²Ù×÷µÄÊı×é£¬Ìá¹©¸ø×ÓÀà-×ÓÀàºÍ¸¸ÀàÖ¸ÏòÍ¬Ò»¿éÊı×éÄÚ´æ.
+	 * å¾…æ“ä½œçš„æ•°ç»„ï¼Œæä¾›ç»™å­ç±»-å­ç±»å’Œçˆ¶ç±»æŒ‡å‘åŒä¸€å—æ•°ç»„å†…å­˜.
 	 * @return
 	 */
 	public Person[] getArr() 
@@ -70,11 +70,11 @@ public abstract class PersonSort<T extends Person> extends Sort<Person>
 	/**
 	 * 
 	* @Title: put 
-	* @Description: ²åÈëÊı¾İ£¬Ìá¹©¸øÍâ²¿²åÈëÊı¾İ.
-	* @param @param element Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: æ’å…¥æ•°æ®ï¼Œæä¾›ç»™å¤–éƒ¨æ’å…¥æ•°æ®.
+	* @param @param element è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void put(T element) 
 	{

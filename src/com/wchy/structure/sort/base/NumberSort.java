@@ -3,22 +3,22 @@ package com.wchy.structure.sort.base;
 import org.apache.log4j.Logger;
 
 /**
- * Êı×ÖÀàÊı×éÅÅĞò³éÏóÀà½Ó¿Ú£¬ÅÅĞòËã·¨ĞèÒª¾ßÌåÀàÊµÏÖ.
+ * æ•°å­—ç±»æ•°ç»„æ’åºæŠ½è±¡ç±»æ¥å£ï¼Œæ’åºç®—æ³•éœ€è¦å…·ä½“ç±»å®ç°.
 * @ClassName NumberSort.java
 * @Description 
 * <p>
-* ÅÅĞòËã·¨³éÏóÀà-Number×ÓÀàĞÍ¶¼¿ÉÒÔÅÅĞò£ºbyte¡¢short¡¢int¡¢long¡¢double¡¢float.char¡¢boolean²»ÊÇNumberµÄ×ÓÀà.
+* æ’åºç®—æ³•æŠ½è±¡ç±»-Numberå­ç±»å‹éƒ½å¯ä»¥æ’åºï¼šbyteã€shortã€intã€longã€doubleã€float.charã€booleanä¸æ˜¯Numberçš„å­ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ24ÈÕ ÉÏÎç12:46:05.
+* @Date 2017å¹´8æœˆ24æ—¥ ä¸Šåˆ12:46:05.
 * 
 * @param <T>
  */
@@ -26,17 +26,17 @@ public abstract class NumberSort<T extends Number> extends Sort<Number>
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private final static Logger LOGGER = Logger.getLogger(NumberSort.class);
 	
 	/**
-	 * Êı×é.
+	 * æ•°ç»„.
 	 */
 	private Number[] arr;
 	
 	/**
-	 * ¹¹Ôìº¯Êı.
+	 * æ„é€ å‡½æ•°.
 	 * @param initCapacity
 	 */
 	protected NumberSort(int initCapacity) 
@@ -48,12 +48,12 @@ public abstract class NumberSort<T extends Number> extends Sort<Number>
 		}
 		arr = new Number[initCapacity];
 		
-		// ¸¸ÀàºÍ×ÓÀàÖ¸ÏòÍ¬Ò»¸öÊı×éÄÚ´æÇøÓò.
+		// çˆ¶ç±»å’Œå­ç±»æŒ‡å‘åŒä¸€ä¸ªæ•°ç»„å†…å­˜åŒºåŸŸ.
 		super.setArr(arr);
 	}
 	
 	/**
-	 * ´ı²Ù×÷µÄÊı×é£¬Ìá¹©¸ø×ÓÀà.
+	 * å¾…æ“ä½œçš„æ•°ç»„ï¼Œæä¾›ç»™å­ç±».
 	 * @return
 	 */
 	protected Number[] getArr() 
@@ -62,11 +62,11 @@ public abstract class NumberSort<T extends Number> extends Sort<Number>
 	}
 	
 	/**
-	 * ±È½ÏÁ½¸öNumberÀàĞÍµÄ´óĞ¡£¬Ìá¹©×ÓÀà±È½ÏÊı×éÔªËØµÄÄÜÁ¦.
+	 * æ¯”è¾ƒä¸¤ä¸ªNumberç±»å‹çš„å¤§å°ï¼Œæä¾›å­ç±»æ¯”è¾ƒæ•°ç»„å…ƒç´ çš„èƒ½åŠ›.
 	 * @param a
 	 * @param b
 	 * @return
-	 * 		true:a´óÓÚb;false:aĞ¡ÓÚb.
+	 * 		true:aå¤§äºb;false:aå°äºb.
 	 */
 	protected boolean compare(Number a, Number b) 
 	{
@@ -76,11 +76,11 @@ public abstract class NumberSort<T extends Number> extends Sort<Number>
 	/**
 	 * 
 	* @Title: put 
-	* @Description: ²åÈëÊı¾İ£¬Ìá¹©¸øÍâ²¿²åÈëÊı¾İ£¬´Ë´¦µÄTÔ¼ÊøÍâ²¿ÊäÈëÀàĞÍ±ØĞëÎªNumberµÄ×ÓÀà.
-	* @param @param element Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: æ’å…¥æ•°æ®ï¼Œæä¾›ç»™å¤–éƒ¨æ’å…¥æ•°æ®ï¼Œæ­¤å¤„çš„Tçº¦æŸå¤–éƒ¨è¾“å…¥ç±»å‹å¿…é¡»ä¸ºNumberçš„å­ç±».
+	* @param @param element è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void put(T element) 
 	{
@@ -88,7 +88,7 @@ public abstract class NumberSort<T extends Number> extends Sort<Number>
 	}
 	
 	/**
-	 * ´òÓ¡Êı×é½á¹û.
+	 * æ‰“å°æ•°ç»„ç»“æœ.
 	 */
 	public void dispaly() 
 	{

@@ -7,18 +7,18 @@ import com.wchy.structure.common.utils.TimeSn;
 * @ClassName Person.java
 * @Description 
 * <p>
-* ÈË.
+* äºº.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:54:46.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:54:46.
 *
  */
 public class Person 
@@ -30,17 +30,17 @@ public class Person
 	private long id;
 	
 	/**
-	 * ĞÕÃû.
+	 * å§“å.
 	 */
 	private String name;
 	
 	/**
-	 * ĞÔ±ğ.
+	 * æ€§åˆ«.
 	 */
 	private String sex;
 	
 	/**
-	 * ÄêÁä.
+	 * å¹´é¾„.
 	 */
 	private int age;
 	
@@ -51,7 +51,7 @@ public class Person
 	public Person(String name, String sex, int age) 
 	{
 		/**
-		 * ÓÃµ¥ÀıµİÔöÖÖ×Ó.
+		 * ç”¨å•ä¾‹é€’å¢ç§å­.
 		 */
 		this.id = TimeSn.getInstance().getSn();
 		this.name = name;
@@ -62,11 +62,11 @@ public class Person
 	/**
 	 * 
 	* @Title: getId 
-	* @Description: »ñÈ¡ID.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return long ·µ»ØÀàĞÍ .
+	* @Description: è·å–ID.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return long è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public long getId() 
 	{
@@ -76,11 +76,11 @@ public class Person
 	/**
 	 * 
 	* @Title: setId 
-	* @Description: ÉèÖÃID.
-	* @param @param id Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®ID.
+	* @param @param id è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setId(long id) 
 	{
@@ -90,11 +90,11 @@ public class Person
 	/**
 	 * 
 	* @Title: getName 
-	* @Description: »ñÈ¡ĞÕÃû.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–å§“å.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getName() 
 	{
@@ -104,11 +104,11 @@ public class Person
 	/**
 	 * 
 	* @Title: setName 
-	* @Description: ÉèÖÃĞÕÃû
-	* @param @param name Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å§“å
+	* @param @param name è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setName(String name) 
 	{
@@ -118,11 +118,11 @@ public class Person
 	/**
 	 * 
 	* @Title: getSex 
-	* @Description: »ñÈ¡ĞÔ±ğ.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return String ·µ»ØÀàĞÍ .
+	* @Description: è·å–æ€§åˆ«.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return String è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public String getSex() 
 	{
@@ -132,11 +132,11 @@ public class Person
 	/**
 	 * 
 	* @Title: setSex 
-	* @Description: ÉèÖÃĞÔ±ğ.
-	* @param @param sex Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®æ€§åˆ«.
+	* @param @param sex è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setSex(String sex) 
 	{
@@ -146,11 +146,11 @@ public class Person
 	/**
 	 * 
 	* @Title: getAge 
-	* @Description: »ñÈ¡ÄêÁä.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @Description: è·å–å¹´é¾„.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public int getAge() 
 	{
@@ -160,11 +160,11 @@ public class Person
 	/**
 	 * 
 	* @Title: setAge 
-	* @Description: ÉèÖÃÄêÁä.
-	* @param @param age Éè¶¨ÎÄ¼ş. 
-	* @return void ·µ»ØÀàĞÍ .
+	* @Description: è®¾ç½®å¹´é¾„.
+	* @param @param age è®¾å®šæ–‡ä»¶. 
+	* @return void è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public void setAge(int age) 
 	{

@@ -12,18 +12,18 @@ import com.wchy.structure.tree.bean.HuffmanNode;
 * @ClassName HuffmanTreeTest.java
 * @Description 
 * <p>
-* ¹ş·òÂüÊ÷²âÊÔ.
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ3ÈÕ ÏÂÎç10:13:00.
+* @Date 2017ï¿½ï¿½9ï¿½ï¿½3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:13:00.
 *
  */
 public class HuffmanTreeTest 

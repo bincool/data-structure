@@ -12,30 +12,30 @@ import com.wchy.structure.tree.bean.HuffmanNode;
 * @ClassName PriorityQueueTest.java
 * @Description 
 * <p>
-* сеох╪╤╤сап╡Бйт.
+* О©╫О©╫О©╫х╪О©╫О©╫О©╫О©╫п╡О©╫О©╫О©╫.
 * </p>
 * <p>
-* оЙо╦цХйЖ.
+* О©╫О©╫о╦О©╫О©╫О©╫О©╫.
 * </p>
 * <p>
-* й╬юЩ╢ЗбК.
+* й╬О©╫О©╫О©╫О©╫О©╫О©╫.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017дЙ9тб3ху обнГ9:29:09.
+* @Date 2017О©╫О©╫9О©╫О©╫3О©╫О©╫ О©╫О©╫О©╫О©╫9:29:09.
 *
  */
 public class PriorityQueueTest 
 {
 	
 	/**
-	 * хуж╬╤тоС.
+	 * О©╫О©╫ж╬О©╫О©╫О©╫О©╫.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(PriorityQueueTest.class);
 	
 	/**
-	 * ╤сап╤тоС.
+	 * О©╫О©╫О©╫п╤О©╫О©╫О©╫.
 	 */
 	private PriorityQueue<HuffmanNode> queueApp;
 

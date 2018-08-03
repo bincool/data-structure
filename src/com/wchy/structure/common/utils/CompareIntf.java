@@ -5,18 +5,18 @@ package com.wchy.structure.common.utils;
 * @ClassName CompareIntf.java
 * @Description 
 * <p>
-* ±È½ÏÆ÷½Ó¿Ú.
+* æ¯”è¾ƒå™¨æ¥å£.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê9ÔÂ17ÈÕ ÏÂÎç2:43:40.
+* @Date 2017å¹´9æœˆ17æ—¥ ä¸‹åˆ2:43:40.
 * 
 * @param <T>
  */
@@ -26,12 +26,12 @@ public interface CompareIntf<T>
 	/**
 	 * 
 	* @Title: compareTo 
-	* @Description: ±È½ÏÆ÷½Ó¿Ú.
+	* @Description: æ¯”è¾ƒå™¨æ¥å£.
 	* @param @param o
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return int ·µ»ØÀàĞÍ .
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return int è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	public int compareTo(T o);
 

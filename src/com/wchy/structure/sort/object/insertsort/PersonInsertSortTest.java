@@ -13,18 +13,18 @@ import com.wchy.structure.sort.object.bean.Person;
 * @ClassName PersonInsertSortTest.java
 * @Description 
 * <p>
-* ÈË£º²åÈëÅÅĞò²âÊÔÀà.
+* ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç8:01:58.
+* @Date 2017ï¿½ï¿½8ï¿½ï¿½26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½8:01:58.
 *
  */
 public class PersonInsertSortTest 

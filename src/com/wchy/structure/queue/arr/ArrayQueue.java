@@ -7,45 +7,45 @@ import com.wchy.structure.queue.intf.MyQueue;
 * @ClassName ArrayQueue.java
 * @Description 
 * <p>
-* µ×²ãÓÃÊı×éÊµÏÖµÄ¶ÓÁĞ.
+* åº•å±‚ç”¨æ•°ç»„å®ç°çš„é˜Ÿåˆ—.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ27ÈÕ ÏÂÎç9:46:24.
+* @Date 2017å¹´8æœˆ27æ—¥ ä¸‹åˆ9:46:24.
 *
  */
 public class ArrayQueue<T> implements MyQueue<T>
 {
 	
 	/**
-	 * ¶ÓÁĞ³¤¶È.
+	 * é˜Ÿåˆ—é•¿åº¦.
 	 */
 	private int maxSize;
 	
 	/**
-	 * ¶ÓÁĞÔªËØ¾Û¼¯,Êı×é.
+	 * é˜Ÿåˆ—å…ƒç´ èšé›†,æ•°ç»„.
 	 */
 	private Object[] queueArray;
 	
 	/**
-	 * ¶ÓÊ×.
+	 * é˜Ÿé¦–.
 	 */
 	private int front = 0;
 	
 	/**
-	 * ¶ÓÎ².
+	 * é˜Ÿå°¾.
 	 */
 	private int rear = 0;
 	
 	/**
-	 * ÅÅ¶ÓÊı.
+	 * æ’é˜Ÿæ•°.
 	 */
 	private int size = 0;
 	
@@ -104,11 +104,11 @@ public class ArrayQueue<T> implements MyQueue<T>
 	/**
 	 * 
 	* @Title: isFull 
-	* @Description: ¶ÓÁĞÂúÅĞ¶Ï.
-	* @param @return Éè¶¨ÎÄ¼ş. 
-	* @return boolean ·µ»ØÀàĞÍ .
+	* @Description: é˜Ÿåˆ—æ»¡åˆ¤æ–­.
+	* @param @return è®¾å®šæ–‡ä»¶. 
+	* @return boolean è¿”å›ç±»å‹ .
 	* @throws 
-	* 		Òì³£.
+	* 		å¼‚å¸¸.
 	 */
 	private boolean isFull() 
 	{

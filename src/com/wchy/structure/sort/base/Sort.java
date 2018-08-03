@@ -7,40 +7,40 @@ import org.apache.log4j.Logger;
 * @ClassName Sort.java
 * @Description 
 * <p>
-* ÅÅĞòËã·¨³éÏóÀà.
+* æ’åºç®—æ³•æŠ½è±¡ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ24ÈÕ ÉÏÎç12:45:28.
+* @Date 2017å¹´8æœˆ24æ—¥ ä¸Šåˆ12:45:28.
 * 
 * @param <T>
  */
 public abstract class Sort<T> 
 {
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private final static Logger LOGGER = Logger.getLogger(Sort.class);
 	
 	/**
-	 * Êı×é.
+	 * æ•°ç»„.
 	 */
 	private T[] arr;
 	
 	/**
-	 * Êı¾İ¸öÊı.
+	 * æ•°æ®ä¸ªæ•°.
 	 */
 	private int size;
 
 	/**
-	 * ´ı²Ù×÷µÄÊı×é£¬Ìá¹©¸ø×ÓÀà.
+	 * å¾…æ“ä½œçš„æ•°ç»„ï¼Œæä¾›ç»™å­ç±».
 	 * @return
 	 */
 	protected void setArr(T[] arr) 
@@ -49,7 +49,7 @@ public abstract class Sort<T>
 	}
 
 	/**
-	 * ±£»¤²Ù×÷Êı×éµÄÔªËØ¸öÊı£¬½ö¶Á.
+	 * ä¿æŠ¤æ“ä½œæ•°ç»„çš„å…ƒç´ ä¸ªæ•°ï¼Œä»…è¯».
 	 * @return
 	 */
 	protected int getSize() 
@@ -58,7 +58,7 @@ public abstract class Sort<T>
 	}
 
 	/**
-	 * ²åÈëÊı¾İµ½Êı×é£¬Ìá¹©×ÓÀàĞÂÔöÊı×éÔªËØµÄÄÜÁ¦.
+	 * æ’å…¥æ•°æ®åˆ°æ•°ç»„ï¼Œæä¾›å­ç±»æ–°å¢æ•°ç»„å…ƒç´ çš„èƒ½åŠ›.
 	 * @param element
 	 */
 	protected void insert(T element) 
@@ -73,7 +73,7 @@ public abstract class Sort<T>
 	}
 	
 	/**
-	 * ½«Á½Ö¸¶¨ÏÂ±êµÄÖµ½øĞĞ½»»»£¬Ìá¹©×ÓÀà½»»»Êı×éÔªËØÎ»ÖÃµÄÄÜÁ¦.
+	 * å°†ä¸¤æŒ‡å®šä¸‹æ ‡çš„å€¼è¿›è¡Œäº¤æ¢ï¼Œæä¾›å­ç±»äº¤æ¢æ•°ç»„å…ƒç´ ä½ç½®çš„èƒ½åŠ›.
 	 * @param indexLeft
 	 * @param indexRight
 	 */
@@ -85,21 +85,21 @@ public abstract class Sort<T>
 	}
 	
 	/**
-	 * ±È½ÏÁ½¸öNumberÀàĞÍµÄ´óĞ¡£¬Ìá¹©×ÓÀà±È½ÏÊı×éÔªËØµÄÄÜÁ¦.
+	 * æ¯”è¾ƒä¸¤ä¸ªNumberç±»å‹çš„å¤§å°ï¼Œæä¾›å­ç±»æ¯”è¾ƒæ•°ç»„å…ƒç´ çš„èƒ½åŠ›.
 	 * @param a
 	 * @param b
 	 * @return
-	 * 		true:a´óÓÚb;false:aĞ¡ÓÚb.
+	 * 		true:aå¤§äºb;false:aå°äºb.
 	 */
 	protected abstract boolean compare(T a, T b);
 	
 	/**
-	 * ÅÅĞòÊı×é£¬×ÓÀà¿ÉÒÔÍ¨¹ıgetArr()»ñÈ¡Êı×éÒıÓÃ£¬È»ºóĞŞ¸Ä¶ÔÆä½øĞĞ .
+	 * æ’åºæ•°ç»„ï¼Œå­ç±»å¯ä»¥é€šè¿‡getArr()è·å–æ•°ç»„å¼•ç”¨ï¼Œç„¶åä¿®æ”¹å¯¹å…¶è¿›è¡Œ .
 	 */
 	public abstract void sort();
 	
 	/**
-	 * ´òÓ¡Êı×é½á¹û.
+	 * æ‰“å°æ•°ç»„ç»“æœ.
 	 */
 	public abstract void dispaly();
 	

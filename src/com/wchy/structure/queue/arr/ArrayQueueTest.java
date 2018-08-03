@@ -12,30 +12,30 @@ import com.wchy.structure.queue.intf.MyQueue;
 * @ClassName ArrayQueueTest.java
 * @Description 
 * <p>
-* 用数组实现的队列测试类.
+* 锟斤拷锟斤拷锟斤拷实锟街的讹拷锟叫诧拷锟斤拷锟斤拷.
 * </p>
 * <p>
-* 详细描述.
+* 锟斤拷细锟斤拷锟斤拷.
 * </p>
 * <p>
-* 示例代码.
+* 示锟斤拷锟斤拷锟斤拷.
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017年8月27日 下午10:06:07.
+* @Date 2017锟斤拷8锟斤拷27锟斤拷 锟斤拷锟斤拷10:06:07.
 *
  */
 public class ArrayQueueTest 
 {
 	
 	/**
-	 * 日志对象.
+	 * 锟斤拷志锟斤拷锟斤拷.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(ArrayQueueTest.class);
 	
 	/**
-	 * 队列对象.
+	 * 锟斤拷锟叫讹拷锟斤拷.
 	 */
 	private MyQueue<Integer> queueApp;
 	

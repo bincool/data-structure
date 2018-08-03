@@ -7,18 +7,18 @@ import com.wchy.structure.sort.base.NumberSort;
 * @ClassName SelectSort.java
 * @Description 
 * <p>
-* Êı×Ö£ºÑ¡ÔñÅÅĞò.
+* æ•°å­—ï¼šé€‰æ‹©æ’åº.
 * </p>
 * <p>
-* TODO ÏêÏ¸ÃèÊö.
+* TODO è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* TODO Ê¾Àı´úÂë.
+* TODO ç¤ºä¾‹ä»£ç .
 * </p>
 *
 * @Author wchy.
 * 
-* @Date 2017Äê8ÔÂ26ÈÕ ÏÂÎç7:46:51.
+* @Date 2017å¹´8æœˆ26æ—¥ ä¸‹åˆ7:46:51.
 * 
 * @param <T>
  */
@@ -51,7 +51,7 @@ public class SelectSort<T extends Number> extends NumberSort<T>
 				}
 			}
 			
-			// ½«i+1~size-1ÖĞµÄ×îĞ¡ÖµºÍµÚiÎ»½øĞĞ½»»»¡£
+			// å°†i+1~size-1ä¸­çš„æœ€å°å€¼å’Œç¬¬iä½è¿›è¡Œäº¤æ¢ã€‚
 			swap(i, indexMin);
 		}
 	}

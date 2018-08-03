@@ -11,7 +11,7 @@ public class DeleteTreeTest
 {
 	
 	/**
-	 * ¶þ²æÊ÷¶ÔÏó.
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	 */
 	private Tree<Schedule> treeApp;
 

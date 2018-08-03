@@ -1,7 +1,7 @@
 package com.wchy.structure.common.utils;
 
 /**
- * µ¥ÀıÀà-Éú²úµİÔöÖÖ×Ó.
+ * å•ä¾‹ç±»-ç”Ÿäº§é€’å¢ç§å­.
  * @author bingV
  *
  */
@@ -9,22 +9,22 @@ public class TimeSn
 {
 	
 	/**
-	 * µ¥ÀıÉú²úµİÔöÖÖ×Ó¶ÔÏó.
+	 * å•ä¾‹ç”Ÿäº§é€’å¢ç§å­å¯¹è±¡.
 	 */
 	private static final TimeSn instance = new TimeSn();
 	
 	/**
-	 * µİÔöÖÖ×Ó.
+	 * é€’å¢ç§å­.
 	 */
 	private static long sn = 1000;
 	
 	/**
-	 * ÖĞ¼ä±äÁ¿£¬¼õÉÙ¶ÔÏóµÄÉùÃ÷.
+	 * ä¸­é—´å˜é‡ï¼Œå‡å°‘å¯¹è±¡çš„å£°æ˜.
 	 */
 	private static final StringBuffer sb = new StringBuffer();
 	
 	/**
-	 * »ñÈ¡µ¥ÀıÉú²úµİÔöÖÖ×Ó¶ÔÏó.
+	 * è·å–å•ä¾‹ç”Ÿäº§é€’å¢ç§å­å¯¹è±¡.
 	 * @return
 	 */
 	public static TimeSn getInstance() 
@@ -33,7 +33,7 @@ public class TimeSn
 	}
 	
 	/**
-	 * »ñÈ¡µİÔöÖÖ×Ó.
+	 * è·å–é€’å¢ç§å­.
 	 * @return
 	 */
 	public long getSn() 
